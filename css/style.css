@@ -889,11 +889,16 @@ button.feature-button {
 
     .site-header {
         min-height: 72px;
+        gap: 8px;
+    }
+
+    .brand {
+        gap: 8px;
     }
 
     .brand-logo {
-        width: 44px;
-        height: 44px;
+        width: 40px;
+        height: 40px;
     }
 
     .brand-tagline {
@@ -901,22 +906,47 @@ button.feature-button {
     }
 
     .brand-name {
-        font-size: 15px;
+        font-size: 13px;
+        letter-spacing: 0.05em;
     }
 
+    .header-actions {
+        gap: 6px;
+    }
+
+    /*
+       IMPORTANT:
+       App Store remains visible on iPhone portrait.
+    */
+
     .app-store-button {
-        display: none;
+        display: inline-flex;
+
+        min-height: 36px;
+
+        padding: 0 9px;
+
+        border-radius: 9px;
+
+        font-size: 11px;
+        font-weight: 700;
+
+        white-space: nowrap;
     }
 
     .language-selector {
-        min-height: 38px;
+        min-height: 36px;
 
-        padding: 0 9px;
+        padding: 0 7px;
+
+        font-size: 11px;
     }
 
     .header-button {
-        width: 40px;
-        height: 38px;
+        width: 36px;
+        height: 36px;
+
+        font-size: 18px;
     }
 
     .hero-panel {
@@ -990,6 +1020,44 @@ button.feature-button {
 
 
 /* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 390px) {
+
+    .brand-name {
+        font-size: 12px;
+    }
+
+    .brand-logo {
+        width: 36px;
+        height: 36px;
+    }
+
+    .app-store-button {
+        min-height: 34px;
+
+        padding: 0 7px;
+
+        font-size: 10px;
+    }
+
+    .language-selector {
+        min-height: 34px;
+
+        padding: 0 5px;
+
+        font-size: 10px;
+    }
+
+    .header-button {
+        width: 34px;
+        height: 34px;
+    }
+}
+
+
+/* =========================================================
    PHONE LANDSCAPE
 ========================================================= */
 
@@ -1011,6 +1079,10 @@ and (
 
     .brand-tagline {
         display: none;
+    }
+
+    .app-store-button {
+        display: inline-flex;
     }
 
     .hero-panel {
