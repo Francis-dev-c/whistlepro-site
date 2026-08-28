@@ -337,13 +337,18 @@ a {
     background: #050505;
 }
 
+/*
+   Les trois images du carrousel sont affichées à 65 %
+   de la zone disponible et restent parfaitement centrées.
+*/
+
 .hero-image {
-    width: 100%;
-    height: 100%;
+    width: 65%;
+    height: 65%;
 
     display: block;
 
-    object-fit: cover;
+    object-fit: contain;
 
     transition: opacity 0.2s ease;
 }
@@ -845,7 +850,13 @@ button.feature-button {
         min-height: 340px;
     }
 
+    /*
+       On conserve le même ratio visuel de 65 %.
+    */
+
     .hero-image {
+        width: 65%;
+        height: 65%;
         object-fit: contain;
     }
 
@@ -914,11 +925,6 @@ button.feature-button {
         gap: 6px;
     }
 
-    /*
-       IMPORTANT:
-       App Store remains visible on iPhone portrait.
-    */
-
     .app-store-button {
         display: inline-flex;
 
@@ -963,7 +969,13 @@ button.feature-button {
         padding: 12px;
     }
 
+    /*
+       Même sur iPhone vertical, l'image reste à 65 %.
+    */
+
     .hero-image {
+        width: 65%;
+        height: 65%;
         object-fit: contain;
     }
 
@@ -1093,6 +1105,16 @@ and (
 
     .hero-media {
         min-height: 300px;
+    }
+
+    /*
+       Même ratio de 65 % en paysage.
+    */
+
+    .hero-image {
+        width: 65%;
+        height: 65%;
+        object-fit: contain;
     }
 
     .hero-content {
