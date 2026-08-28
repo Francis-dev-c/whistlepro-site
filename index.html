@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
 
@@ -20,11 +21,17 @@
 
 <body>
 
-    <!-- HEADER -->
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
 
     <header class="site-header">
 
-        <a class="brand" href="#home" aria-label="Whistle Pro home">
+        <a
+            class="brand"
+            href="#home"
+            aria-label="Whistle Pro home"
+        >
 
             <img
                 class="brand-logo"
@@ -64,7 +71,6 @@
 
 
             <a
-                id="appStoreButton"
                 class="app-store-button"
                 href="https://apps.apple.com/ca/app/whistle-pro/id6753323340?l=fr-CA"
                 target="_blank"
@@ -88,7 +94,9 @@
     </header>
 
 
-    <!-- SIDE MENU -->
+    <!-- =====================================================
+         SIDE MENU
+    ====================================================== -->
 
     <aside
         id="mainMenu"
@@ -108,31 +116,28 @@
 
         <nav class="menu-links">
 
-            <button
-                type="button"
-                data-view="home"
+            <a
+                href="#home"
                 data-i18n="menuHome"
             >
                 Home
-            </button>
+            </a>
 
 
-            <button
-                type="button"
-                data-view="presentation"
+            <a
+                href="#presentation"
                 data-i18n="menuPresentation"
             >
                 Presentation
-            </button>
+            </a>
 
 
-            <button
-                type="button"
-                data-view="tutorials"
+            <a
+                href="#tutorials"
                 data-i18n="menuTutorials"
             >
                 Tutorials
-            </button>
+            </a>
 
         </nav>
 
@@ -145,12 +150,16 @@
     ></div>
 
 
-    <!-- MAIN -->
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
 
     <main class="site-main">
 
 
-        <!-- HOME -->
+        <!-- =================================================
+             HOME
+        ================================================== -->
 
         <section
             id="homeView"
@@ -191,14 +200,12 @@
                     </p>
 
 
-                    <div
-                        id="slideIndicators"
-                        class="slide-indicators"
-                        aria-label="Slideshow position"
-                    >
+                    <div class="slide-indicators">
+
                         <span class="indicator active"></span>
                         <span class="indicator"></span>
                         <span class="indicator"></span>
+
                     </div>
 
                 </div>
@@ -206,7 +213,9 @@
             </div>
 
 
-            <!-- MAIN NAVIGATION -->
+            <!-- =================================================
+                 FEATURE NAVIGATION
+            ================================================== -->
 
             <div class="feature-navigation">
 
@@ -249,24 +258,25 @@
                 </button>
 
 
-                <button
+                <a
                     class="feature-button"
-                    type="button"
-                    data-view="features"
+                    href="#features"
                 >
                     <span class="feature-number">04</span>
 
                     <span data-i18n="featureAll">
                         All Features
                     </span>
-                </button>
+                </a>
 
             </div>
 
         </section>
 
 
-        <!-- ALL FEATURES -->
+        <!-- =================================================
+             ALL FEATURES
+        ================================================== -->
 
         <section
             id="featuresView"
@@ -275,16 +285,15 @@
 
             <div class="content-panel scrollable-panel">
 
-                <button
+                <a
                     class="back-button"
-                    type="button"
-                    data-view="home"
+                    href="#home"
                 >
                     ←
                     <span data-i18n="back">
                         Back
                     </span>
-                </button>
+                </a>
 
 
                 <h1 data-i18n="allFeaturesTitle">
@@ -293,6 +302,7 @@
 
 
                 <div class="features-grid">
+
 
                     <article class="feature-card">
 
@@ -316,7 +326,7 @@
                         <img
                             class="feature-card-image"
                             src="assets/images/iphone-results.PNG"
-                            alt="Whistle Pro match results on iPhone"
+                            alt="Whistle Pro match results"
                         >
 
                         <h2 data-i18n="featuresPhoneTitle">
@@ -356,7 +366,9 @@
         </section>
 
 
-        <!-- PRESENTATION -->
+        <!-- =================================================
+             PRESENTATION
+        ================================================== -->
 
         <section
             id="presentationView"
@@ -365,16 +377,15 @@
 
             <div class="content-panel">
 
-                <button
+                <a
                     class="back-button"
-                    type="button"
-                    data-view="home"
+                    href="#home"
                 >
                     ←
                     <span data-i18n="back">
                         Back
                     </span>
-                </button>
+                </a>
 
 
                 <div class="section-heading">
@@ -419,7 +430,9 @@
         </section>
 
 
-        <!-- TUTORIALS -->
+        <!-- =================================================
+             TUTORIALS
+        ================================================== -->
 
         <section
             id="tutorialsView"
@@ -428,20 +441,18 @@
 
             <div class="content-panel tutorial-panel">
 
-                <button
+                <a
                     class="back-button"
-                    type="button"
-                    data-view="home"
+                    href="#home"
                 >
                     ←
                     <span data-i18n="back">
                         Back
                     </span>
-                </button>
+                </a>
 
 
                 <div class="tutorial-layout">
-
 
                     <div class="tutorial-navigation">
 
@@ -502,7 +513,9 @@
         </section>
 
 
-        <!-- PRIVACY POLICY -->
+        <!-- =================================================
+             PRIVACY POLICY
+        ================================================== -->
 
         <section
             id="privacyView"
@@ -511,16 +524,15 @@
 
             <div class="content-panel legal-panel">
 
-                <button
+                <a
                     class="back-button"
-                    type="button"
-                    data-view="home"
+                    href="#home"
                 >
                     ←
                     <span data-i18n="back">
                         Back
                     </span>
-                </button>
+                </a>
 
 
                 <div
@@ -534,7 +546,9 @@
         </section>
 
 
-        <!-- EUROPEAN PRIVACY POLICY -->
+        <!-- =================================================
+             EUROPEAN PRIVACY
+        ================================================== -->
 
         <section
             id="legalView"
@@ -543,16 +557,15 @@
 
             <div class="content-panel legal-panel">
 
-                <button
+                <a
                     class="back-button"
-                    type="button"
-                    data-view="home"
+                    href="#home"
                 >
                     ←
                     <span data-i18n="back">
                         Back
                     </span>
-                </button>
+                </a>
 
 
                 <div
@@ -565,11 +578,12 @@
 
         </section>
 
-
     </main>
 
 
-    <!-- FOOTER -->
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
 
     <footer class="site-footer">
 
@@ -585,13 +599,12 @@
         </span>
 
 
-        <button
-            type="button"
-            data-view="privacy"
+        <a
+            href="#privacy"
             data-i18n="menuPrivacy"
         >
             Privacy Policy
-        </button>
+        </a>
 
 
         <span class="footer-separator">
@@ -599,13 +612,12 @@
         </span>
 
 
-        <button
-            type="button"
-            data-view="legal"
+        <a
+            href="#legal"
             data-i18n="menuLegal"
         >
             European Privacy Policy
-        </button>
+        </a>
 
     </footer>
 
