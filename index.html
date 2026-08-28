@@ -20,29 +20,35 @@
 
 <body>
 
-    <!-- =========================================================
+    <!-- =====================================================
          HEADER
-    ========================================================== -->
+    ====================================================== -->
 
     <header class="site-header">
 
-        <div class="brand">
-            <div class="brand-name">WHISTLE PRO</div>
-            <div class="brand-tagline" data-i18n="brandTagline">
-                Built by referees. For referees.
+        <a class="brand" href="#home" aria-label="Whistle Pro home">
+
+            <img
+                class="brand-logo"
+                src="assets/images/whistlepro-logo.png"
+                alt="Whistle Pro"
+            >
+
+            <div class="brand-copy">
+                <div class="brand-name">WHISTLE PRO</div>
+
+                <div
+                    class="brand-tagline"
+                    data-i18n="brandTagline"
+                >
+                    Built by referees. For referees.
+                </div>
             </div>
-        </div>
+
+        </a>
+
 
         <nav class="header-actions">
-
-            <button
-                id="menuButton"
-                class="header-button menu-button"
-                type="button"
-                aria-label="Open menu"
-            >
-                ☰
-            </button>
 
             <select
                 id="languageSelector"
@@ -54,6 +60,7 @@
                 <option value="es">ES</option>
             </select>
 
+
             <a
                 id="appStoreButton"
                 class="app-store-button"
@@ -61,19 +68,33 @@
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                App Store
+                 App Store
             </a>
+
+
+            <button
+                id="menuButton"
+                class="header-button menu-button"
+                type="button"
+                aria-label="Open menu"
+            >
+                ☰
+            </button>
 
         </nav>
 
     </header>
 
 
-    <!-- =========================================================
-         MENU
-    ========================================================== -->
+    <!-- =====================================================
+         SIDE MENU
+    ====================================================== -->
 
-    <aside id="mainMenu" class="main-menu" aria-hidden="true">
+    <aside
+        id="mainMenu"
+        class="main-menu"
+        aria-hidden="true"
+    >
 
         <button
             id="closeMenuButton"
@@ -84,27 +105,52 @@
             ×
         </button>
 
+
         <nav class="menu-links">
 
-            <button type="button" data-view="home" data-i18n="menuHome">
+            <button
+                type="button"
+                data-view="home"
+                data-i18n="menuHome"
+            >
                 Home
             </button>
 
-            <button type="button" data-view="presentation" data-i18n="menuPresentation">
+            <button
+                type="button"
+                data-view="presentation"
+                data-i18n="menuPresentation"
+            >
                 Presentation
             </button>
 
-            <button type="button" data-view="tutorials" data-i18n="menuTutorials">
+            <button
+                type="button"
+                data-view="tutorials"
+                data-i18n="menuTutorials"
+            >
                 Tutorials
             </button>
 
-            <button type="button" data-view="legal" data-i18n="menuLegal">
-                Privacy & Legal
+            <button
+                type="button"
+                data-view="privacy"
+                data-i18n="menuPrivacy"
+            >
+                Privacy Policy
+            </button>
+
+            <button
+                type="button"
+                data-view="legal"
+                data-i18n="menuLegal"
+            >
+                Legal Notice
             </button>
 
             <a
-                href="#"
                 id="menuAppStoreButton"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-i18n="menuDownload"
@@ -116,55 +162,66 @@
 
     </aside>
 
-    <div id="menuOverlay" class="menu-overlay"></div>
+    <div
+        id="menuOverlay"
+        class="menu-overlay"
+    ></div>
 
 
-    <!-- =========================================================
-         MAIN APPLICATION-LIKE WEBSITE
-    ========================================================== -->
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
 
     <main class="site-main">
 
 
-        <!-- =====================================================
+        <!-- =================================================
              HOME
-        ====================================================== -->
+        ================================================== -->
 
-        <section id="homeView" class="view active-view">
+        <section
+            id="homeView"
+            class="view active-view"
+        >
 
             <div class="hero-panel">
 
-                <div class="hero-media">
 
-                    <div class="media-placeholder">
-                        <span>WHISTLE PRO</span>
-                        <small>Apple Watch + iPhone</small>
-                    </div>
+                <!-- IMAGE -->
+
+                <div class="hero-media">
 
                     <img
                         id="heroImage"
                         class="hero-image"
-                        src=""
-                        alt=""
-                        hidden
+                        src="assets/images/watch-report.png"
+                        alt="Whistle Pro on Apple Watch"
                     >
 
                 </div>
 
+
+                <!-- TEXT -->
+
                 <div class="hero-content">
 
-                    <div class="hero-kicker" data-i18n="heroKicker">
-                        MATCH MANAGEMENT
+                    <div
+                        id="heroKicker"
+                        class="hero-kicker"
+                    >
+                        WHISTLE PRO
                     </div>
 
                     <h1 id="heroTitle">
-                        Plan your matches
+                        Prepare. Referee. Review.
                     </h1>
 
                     <p id="heroDescription">
-                        Import your schedule or create matches directly on iPhone.
-                        Everything is ready before you step onto the field.
+                        Your match tools on Apple Watch and iPhone,
+                        designed for referees who want to stay focused
+                        on the game.
                     </p>
+
 
                     <div
                         id="slideIndicators"
@@ -181,7 +238,9 @@
             </div>
 
 
-            <!-- FEATURE NAVIGATION -->
+            <!-- =================================================
+                 MAIN NAVIGATION
+            ================================================== -->
 
             <div class="feature-navigation">
 
@@ -191,8 +250,12 @@
                     data-slide="0"
                 >
                     <span class="feature-number">01</span>
-                    <span data-i18n="featureSchedule">Schedule</span>
+
+                    <span data-i18n="featurePrepare">
+                        Prepare
+                    </span>
                 </button>
+
 
                 <button
                     class="feature-button"
@@ -200,8 +263,12 @@
                     data-slide="1"
                 >
                     <span class="feature-number">02</span>
-                    <span data-i18n="featureMatch">Match & Results</span>
+
+                    <span data-i18n="featureReferee">
+                        Referee
+                    </span>
                 </button>
+
 
                 <button
                     class="feature-button"
@@ -209,8 +276,12 @@
                     data-slide="2"
                 >
                     <span class="feature-number">03</span>
-                    <span data-i18n="featureImport">Import / Export</span>
+
+                    <span data-i18n="featureReview">
+                        Review
+                    </span>
                 </button>
+
 
                 <button
                     class="feature-button"
@@ -218,7 +289,10 @@
                     data-view="features"
                 >
                     <span class="feature-number">04</span>
-                    <span data-i18n="featureAll">All Features</span>
+
+                    <span data-i18n="featureAll">
+                        All Features
+                    </span>
                 </button>
 
             </div>
@@ -226,11 +300,14 @@
         </section>
 
 
-        <!-- =====================================================
+        <!-- =================================================
              ALL FEATURES
-        ====================================================== -->
+        ================================================== -->
 
-        <section id="featuresView" class="view">
+        <section
+            id="featuresView"
+            class="view"
+        >
 
             <div class="content-panel scrollable-panel">
 
@@ -239,49 +316,76 @@
                     type="button"
                     data-view="home"
                 >
-                    ← <span data-i18n="back">Back</span>
+                    ←
+                    <span data-i18n="back">
+                        Back
+                    </span>
                 </button>
+
 
                 <h1 data-i18n="allFeaturesTitle">
                     Everything you need. On and off the field.
                 </h1>
 
+
                 <div class="features-grid">
 
+
                     <article class="feature-card">
+
+                        <img
+                            class="feature-card-image"
+                            src="assets/images/watch-timer.jpg"
+                            alt="Whistle Pro match timer"
+                        >
+
                         <h2 data-i18n="featuresWatchTitle">
                             On the field
                         </h2>
 
                         <ul id="watchFeatures"></ul>
+
                     </article>
 
 
                     <article class="feature-card">
+
+                        <img
+                            class="feature-card-image"
+                            src="assets/images/iphone-results.PNG"
+                            alt="Whistle Pro match results on iPhone"
+                        >
+
                         <h2 data-i18n="featuresPhoneTitle">
                             After the match
                         </h2>
 
                         <ul id="phoneFeatures"></ul>
+
                     </article>
 
 
                     <article class="feature-card">
+
                         <h2 data-i18n="featuresDataTitle">
                             Data & reporting
                         </h2>
 
                         <ul id="dataFeatures"></ul>
+
                     </article>
 
 
                     <article class="feature-card">
+
                         <h2 data-i18n="featuresExpensesTitle">
                             Expenses & mileage
                         </h2>
 
                         <ul id="expenseFeatures"></ul>
+
                     </article>
+
 
                 </div>
 
@@ -290,11 +394,14 @@
         </section>
 
 
-        <!-- =====================================================
+        <!-- =================================================
              PRESENTATION
-        ====================================================== -->
+        ================================================== -->
 
-        <section id="presentationView" class="view">
+        <section
+            id="presentationView"
+            class="view"
+        >
 
             <div class="content-panel">
 
@@ -303,43 +410,47 @@
                     type="button"
                     data-view="home"
                 >
-                    ← <span data-i18n="back">Back</span>
+                    ←
+                    <span data-i18n="back">
+                        Back
+                    </span>
                 </button>
 
+
                 <div class="section-heading">
+
                     <h1 data-i18n="presentationTitle">
                         Discover Whistle Pro
                     </h1>
 
                     <p data-i18n="presentationDescription">
-                        From match import to the final report, see how
-                        Whistle Pro connects your iPhone and Apple Watch.
+                        From match preparation to the final report,
+                        discover how Whistle Pro connects your iPhone
+                        and Apple Watch.
                     </p>
+
                 </div>
+
 
                 <div class="video-frame">
 
                     <div class="video-placeholder">
+
                         <span>16:9</span>
+
                         <strong data-i18n="presentationVideo">
                             Presentation video
                         </strong>
+
                     </div>
-
-                    <!--
-                    The final video will go here:
-
-                    <video controls playsinline poster="assets/images/presentation.jpg">
-                        <source
-                            src="assets/videos/whistle-pro-presentation.mp4"
-                            type="video/mp4"
-                        >
-                    </video>
-                    -->
 
                 </div>
 
-                <p class="availability-note" data-i18n="availabilityNote">
+
+                <p
+                    class="availability-note"
+                    data-i18n="availabilityNote"
+                >
                     Spordle integration is currently available in Canada.
                     Additional platform connectors are in development.
                 </p>
@@ -349,11 +460,14 @@
         </section>
 
 
-        <!-- =====================================================
+        <!-- =================================================
              TUTORIALS
-        ====================================================== -->
+        ================================================== -->
 
-        <section id="tutorialsView" class="view">
+        <section
+            id="tutorialsView"
+            class="view"
+        >
 
             <div class="content-panel tutorial-panel">
 
@@ -362,10 +476,17 @@
                     type="button"
                     data-view="home"
                 >
-                    ← <span data-i18n="back">Back</span>
+                    ←
+                    <span data-i18n="back">
+                        Back
+                    </span>
                 </button>
 
+
                 <div class="tutorial-layout">
+
+
+                    <!-- LEFT COLUMN -->
 
                     <div class="tutorial-navigation">
 
@@ -373,7 +494,8 @@
                             Tutorials
                         </h2>
 
-                        <!-- Mobile selector -->
+
+                        <!-- Mobile dropdown -->
 
                         <select
                             id="tutorialSelector"
@@ -382,7 +504,8 @@
                         >
                         </select>
 
-                        <!-- Desktop selector -->
+
+                        <!-- Desktop list -->
 
                         <div
                             id="tutorialList"
@@ -393,6 +516,8 @@
                     </div>
 
 
+                    <!-- VIDEO -->
+
                     <div class="tutorial-content">
 
                         <h1 id="tutorialTitle">
@@ -400,16 +525,20 @@
                         </h1>
 
                         <p id="tutorialDescription">
-                            Prepare a match before heading onto the field.
+                            Prepare your match before heading onto the field.
                         </p>
+
 
                         <div class="video-frame tutorial-video">
 
                             <div class="video-placeholder">
+
                                 <span>16:9</span>
+
                                 <strong id="tutorialVideoLabel">
                                     Tutorial video
                                 </strong>
+
                             </div>
 
                         </div>
@@ -423,11 +552,14 @@
         </section>
 
 
-        <!-- =====================================================
-             PRIVACY & LEGAL
-        ====================================================== -->
+        <!-- =================================================
+             PRIVACY POLICY
+        ================================================== -->
 
-        <section id="legalView" class="view">
+        <section
+            id="privacyView"
+            class="view"
+        >
 
             <div class="content-panel legal-panel">
 
@@ -436,40 +568,51 @@
                     type="button"
                     data-view="home"
                 >
-                    ← <span data-i18n="back">Back</span>
+                    ←
+                    <span data-i18n="back">
+                        Back
+                    </span>
                 </button>
 
 
-                <div class="legal-tabs">
-
-                    <button
-                        id="privacyTab"
-                        class="legal-tab active"
-                        type="button"
-                        data-legal="privacy"
-                        data-i18n="privacy"
-                    >
-                        Privacy Policy
-                    </button>
-
-                    <button
-                        id="legalTab"
-                        class="legal-tab"
-                        type="button"
-                        data-legal="notice"
-                        data-i18n="legalNotice"
-                    >
-                        Legal Notice
-                    </button>
-
+                <div
+                    id="privacyContent"
+                    class="legal-content"
+                >
                 </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             LEGAL NOTICE / EUROPE
+        ================================================== -->
+
+        <section
+            id="legalView"
+            class="view"
+        >
+
+            <div class="content-panel legal-panel">
+
+                <button
+                    class="back-button"
+                    type="button"
+                    data-view="home"
+                >
+                    ←
+                    <span data-i18n="back">
+                        Back
+                    </span>
+                </button>
 
 
                 <div
                     id="legalContent"
                     class="legal-content"
                 >
-                    <!-- Loaded by app.js -->
                 </div>
 
             </div>
@@ -480,24 +623,44 @@
     </main>
 
 
-    <!-- =========================================================
+    <!-- =====================================================
          FOOTER
-    ========================================================== -->
+    ====================================================== -->
 
     <footer class="site-footer">
 
         <span>
-            © <span id="currentYear"></span> Whistle Pro
+            ©
+            <span id="currentYear"></span>
+            Whistle Pro
         </span>
 
-        <span class="footer-separator">•</span>
+
+        <span class="footer-separator">
+            •
+        </span>
+
+
+        <button
+            type="button"
+            data-view="privacy"
+            data-i18n="menuPrivacy"
+        >
+            Privacy Policy
+        </button>
+
+
+        <span class="footer-separator">
+            •
+        </span>
+
 
         <button
             type="button"
             data-view="legal"
-            data-i18n="privacy"
+            data-i18n="menuLegal"
         >
-            Privacy Policy
+            Legal Notice
         </button>
 
     </footer>
