@@ -311,7 +311,10 @@ a {
 ========================================================= */
 
 .hero-panel {
-    min-height: 470px;
+    width: 100%;
+    aspect-ratio: 16 / 7;
+
+    min-height: 0;
 
     display: grid;
     grid-template-columns: 52% 48%;
@@ -325,8 +328,11 @@ a {
 }
 
 .hero-media {
+    width: 100%;
+    height: 100%;
+
     min-width: 0;
-    min-height: 470px;
+    min-height: 0;
 
     display: flex;
     align-items: center;
@@ -336,11 +342,6 @@ a {
 
     background: #050505;
 }
-
-/*
-   Les trois images du carrousel sont affichées à 65 %
-   de la zone disponible et restent parfaitement centrées.
-*/
 
 .hero-image {
     width: 65%;
@@ -354,13 +355,21 @@ a {
 }
 
 .hero-content {
-    padding: clamp(36px, 5vw, 78px);
+    width: 100%;
+    height: 100%;
+
+    min-width: 0;
+    min-height: 0;
+
+    padding: clamp(30px, 4vw, 68px);
 
     display: flex;
     flex-direction: column;
 
     align-items: flex-start;
     justify-content: center;
+
+    overflow: hidden;
 }
 
 .hero-kicker {
@@ -379,7 +388,7 @@ a {
 
     margin: 0;
 
-    font-size: clamp(36px, 4vw, 60px);
+    font-size: clamp(34px, 3.8vw, 58px);
     line-height: 1.04;
 
     letter-spacing: -0.04em;
@@ -388,15 +397,15 @@ a {
 .hero-content p {
     max-width: 570px;
 
-    margin: 22px 0 0;
+    margin: 20px 0 0;
 
     color: var(--text-soft);
 
-    font-size: clamp(16px, 1.5vw, 20px);
+    font-size: clamp(16px, 1.4vw, 19px);
 }
 
 .slide-indicators {
-    margin-top: 34px;
+    margin-top: 28px;
 
     display: flex;
 
@@ -843,16 +852,15 @@ button.feature-button {
     }
 
     .hero-panel {
-        grid-template-columns: 1fr;
+        aspect-ratio: 16 / 7;
+        grid-template-columns: 48% 52%;
     }
 
     .hero-media {
-        min-height: 340px;
+        width: 100%;
+        height: 100%;
+        min-height: 0;
     }
-
-    /*
-       On conserve le même ratio visuel de 65 %.
-    */
 
     .hero-image {
         width: 65%;
@@ -861,7 +869,20 @@ button.feature-button {
     }
 
     .hero-content {
-        padding: 35px;
+        padding: 28px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(30px, 4vw, 42px);
+    }
+
+    .hero-content p {
+        margin-top: 14px;
+        font-size: 15px;
+    }
+
+    .slide-indicators {
+        margin-top: 20px;
     }
 
     .feature-navigation {
@@ -955,46 +976,69 @@ button.feature-button {
         font-size: 18px;
     }
 
+    /*
+       En portrait, le rectangle garde toujours
+       exactement le même format 4:5.
+    */
+
     .hero-panel {
+        width: 100%;
+        aspect-ratio: 4 / 5;
+
         min-height: 0;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 46% 54%;
 
         border-radius: 22px;
     }
 
     .hero-media {
+        width: 100%;
+        height: 100%;
+
         min-height: 0;
 
-        height: min(36vh, 310px);
-
-        padding: 12px;
+        padding: 8px;
     }
-
-    /*
-       Même sur iPhone vertical, l'image reste à 65 %.
-    */
 
     .hero-image {
         width: 65%;
         height: 65%;
+
         object-fit: contain;
     }
 
     .hero-content {
-        padding: 25px 22px;
+        width: 100%;
+        height: 100%;
+
+        min-height: 0;
+
+        padding: 18px 22px 20px;
+
+        justify-content: center;
+    }
+
+    .hero-kicker {
+        margin-bottom: 8px;
+
+        font-size: 10px;
     }
 
     .hero-content h1 {
-        font-size: 32px;
+        font-size: clamp(26px, 8vw, 32px);
     }
 
     .hero-content p {
-        margin-top: 14px;
+        margin-top: 10px;
 
-        font-size: 15px;
+        font-size: 14px;
+        line-height: 1.4;
     }
 
     .slide-indicators {
-        margin-top: 22px;
+        margin-top: 15px;
     }
 
     .feature-navigation {
@@ -1066,6 +1110,18 @@ button.feature-button {
         width: 34px;
         height: 34px;
     }
+
+    .hero-content {
+        padding: 15px 18px 17px;
+    }
+
+    .hero-content h1 {
+        font-size: 25px;
+    }
+
+    .hero-content p {
+        font-size: 13px;
+    }
 }
 
 
@@ -1097,42 +1153,55 @@ and (
         display: inline-flex;
     }
 
+    /*
+       Même rectangle fixe en paysage.
+    */
+
     .hero-panel {
-        min-height: 300px;
+        width: 100%;
+        aspect-ratio: 16 / 7;
+
+        min-height: 0;
 
         grid-template-columns: 48% 52%;
+        grid-template-rows: 1fr;
     }
 
     .hero-media {
-        min-height: 300px;
-    }
+        width: 100%;
+        height: 100%;
 
-    /*
-       Même ratio de 65 % en paysage.
-    */
+        min-height: 0;
+    }
 
     .hero-image {
         width: 65%;
         height: 65%;
+
         object-fit: contain;
     }
 
     .hero-content {
-        padding: 24px;
+        width: 100%;
+        height: 100%;
+
+        min-height: 0;
+
+        padding: 20px 24px;
     }
 
     .hero-content h1 {
-        font-size: 30px;
+        font-size: 28px;
     }
 
     .hero-content p {
-        margin-top: 10px;
+        margin-top: 8px;
 
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .slide-indicators {
-        margin-top: 16px;
+        margin-top: 12px;
     }
 
     .feature-navigation {
