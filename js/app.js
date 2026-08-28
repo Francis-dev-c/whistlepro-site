@@ -1,11 +1,10 @@
 /* =========================================================
    WHISTLE PRO WEBSITE
-   Main application logic
 ========================================================= */
 
 
 /* =========================================================
-   CONFIGURATION
+   CONFIG
 ========================================================= */
 
 const APP_STORE_URL = "#";
@@ -25,19 +24,19 @@ const translations = {
         menuHome: "Home",
         menuPresentation: "Presentation",
         menuTutorials: "Tutorials",
-        menuLegal: "Privacy & Legal",
+        menuPrivacy: "Privacy Policy",
+        menuLegal: "Legal Notice",
         menuDownload: "Download on the App Store",
 
-        heroKicker: "MATCH MANAGEMENT",
-
-        featureSchedule: "Schedule",
-        featureMatch: "Match & Results",
-        featureImport: "Import / Export",
+        featurePrepare: "Prepare",
+        featureReferee: "Referee",
+        featureReview: "Review",
         featureAll: "All Features",
 
         back: "Back",
 
-        allFeaturesTitle: "Everything you need. On and off the field.",
+        allFeaturesTitle:
+            "Everything you need. On and off the field.",
 
         featuresWatchTitle: "On the field",
         featuresPhoneTitle: "After the match",
@@ -45,18 +44,16 @@ const translations = {
         featuresExpensesTitle: "Expenses & mileage",
 
         presentationTitle: "Discover Whistle Pro",
+
         presentationDescription:
-            "From match import to the final report, see how Whistle Pro connects your iPhone and Apple Watch.",
+            "From match preparation to the final report, discover how Whistle Pro connects your iPhone and Apple Watch.",
 
         presentationVideo: "Presentation video",
 
         availabilityNote:
             "Spordle integration is currently available in Canada. Additional platform connectors are in development.",
 
-        tutorialsTitle: "Tutorials",
-
-        privacy: "Privacy Policy",
-        legalNotice: "Legal Notice"
+        tutorialsTitle: "Tutorials"
     },
 
 
@@ -66,14 +63,13 @@ const translations = {
         menuHome: "Accueil",
         menuPresentation: "Présentation",
         menuTutorials: "Tutoriels",
-        menuLegal: "Confidentialité et mentions légales",
+        menuPrivacy: "Politique de confidentialité",
+        menuLegal: "Mentions légales",
         menuDownload: "Télécharger sur l’App Store",
 
-        heroKicker: "GESTION DE MATCH",
-
-        featureSchedule: "Calendrier",
-        featureMatch: "Match et résultats",
-        featureImport: "Import / Export",
+        featurePrepare: "Préparer",
+        featureReferee: "Arbitrer",
+        featureReview: "Analyser",
         featureAll: "Toutes les fonctionnalités",
 
         back: "Retour",
@@ -87,18 +83,16 @@ const translations = {
         featuresExpensesTitle: "Dépenses et kilométrage",
 
         presentationTitle: "Découvrez Whistle Pro",
+
         presentationDescription:
-            "De l’importation du match jusqu’au rapport final, découvrez comment Whistle Pro relie votre iPhone et votre Apple Watch.",
+            "De la préparation du match jusqu’au rapport final, découvrez comment Whistle Pro relie votre iPhone et votre Apple Watch.",
 
         presentationVideo: "Vidéo de présentation",
 
         availabilityNote:
             "L’intégration Spordle est actuellement disponible au Canada. Des connecteurs vers d’autres plateformes sont en développement.",
 
-        tutorialsTitle: "Tutoriels",
-
-        privacy: "Politique de confidentialité",
-        legalNotice: "Mentions légales"
+        tutorialsTitle: "Tutoriels"
     },
 
 
@@ -108,14 +102,13 @@ const translations = {
         menuHome: "Inicio",
         menuPresentation: "Presentación",
         menuTutorials: "Tutoriales",
-        menuLegal: "Privacidad y avisos legales",
+        menuPrivacy: "Política de privacidad",
+        menuLegal: "Aviso legal",
         menuDownload: "Descargar en App Store",
 
-        heroKicker: "GESTIÓN DE PARTIDOS",
-
-        featureSchedule: "Calendario",
-        featureMatch: "Partido y resultados",
-        featureImport: "Importar / Exportar",
+        featurePrepare: "Preparar",
+        featureReferee: "Arbitrar",
+        featureReview: "Revisar",
         featureAll: "Todas las funciones",
 
         back: "Volver",
@@ -129,97 +122,119 @@ const translations = {
         featuresExpensesTitle: "Gastos y kilometraje",
 
         presentationTitle: "Descubre Whistle Pro",
+
         presentationDescription:
-            "Desde la importación del partido hasta el informe final, descubre cómo Whistle Pro conecta tu iPhone y Apple Watch.",
+            "Desde la preparación del partido hasta el informe final, descubre cómo Whistle Pro conecta tu iPhone y Apple Watch.",
 
         presentationVideo: "Video de presentación",
 
         availabilityNote:
             "La integración con Spordle está disponible actualmente en Canadá. Se están desarrollando conectores para otras plataformas.",
 
-        tutorialsTitle: "Tutoriales",
-
-        privacy: "Política de privacidad",
-        legalNotice: "Aviso legal"
+        tutorialsTitle: "Tutoriales"
     }
-
 };
 
 
 /* =========================================================
-   HOME SLIDES
+   HERO SLIDES
 ========================================================= */
 
 const slides = {
 
     en: [
         {
-            title: "Plan your matches",
+            kicker: "PREPARE",
+            title: "Everything ready before kickoff.",
             description:
-                "Import your schedule or create matches directly on iPhone. Teams, fields and match details are ready before you step onto the field.",
-            image: ""
+                "Plan your matches, teams and schedule before stepping onto the field.",
+            image: "assets/images/whistlepro-logo.png",
+            alt: "Whistle Pro"
         },
+
         {
-            title: "Referee. Don't manage a timer.",
+            kicker: "REFEREE",
+            title: "Everything you need on your wrist.",
             description:
-                "Your Apple Watch handles the clock, score, cards, player numbers, stoppages, overtime and shootouts while you focus on the match.",
-            image: ""
+                "Timer, score, cards and match events stay close at hand while you focus on refereeing.",
+            image: "assets/images/watch-report.png",
+            alt: "Whistle Pro running on Apple Watch"
         },
+
         {
-            title: "From schedule to match report",
+            kicker: "REVIEW",
+            title: "Your match continues on iPhone.",
             description:
-                "Import scheduled matches and rosters, then export completed match data and reports directly from Whistle Pro.",
-            image: ""
+                "Review results, match history and reports on a larger screen after the final whistle.",
+            image: "assets/images/iphone-results.PNG",
+            alt: "Whistle Pro match results on iPhone"
         }
     ],
+
 
     fr: [
         {
-            title: "Planifiez vos matchs",
+            kicker: "PRÉPARER",
+            title: "Tout est prêt avant le coup d’envoi.",
             description:
-                "Importez votre calendrier ou créez vos matchs directement sur iPhone. Équipes, terrains et détails sont prêts avant votre arrivée sur le terrain.",
-            image: ""
+                "Préparez vos matchs, vos équipes et votre calendrier avant d’arriver sur le terrain.",
+            image: "assets/images/whistlepro-logo.png",
+            alt: "Whistle Pro"
         },
+
         {
-            title: "Arbitrez. Whistle Pro gère le reste.",
+            kicker: "ARBITRER",
+            title: "Tout ce qu’il vous faut au poignet.",
             description:
-                "Votre Apple Watch gère le chrono, le score, les cartons, les numéros de joueurs, les pauses, les prolongations et les tirs au but.",
-            image: ""
+                "Chrono, score, cartons et événements du match restent à portée de main pendant que vous arbitrez.",
+            image: "assets/images/watch-report.png",
+            alt: "Whistle Pro sur Apple Watch"
         },
+
         {
-            title: "Du calendrier au rapport de match",
+            kicker: "ANALYSER",
+            title: "Le match se poursuit sur iPhone.",
             description:
-                "Importez vos matchs et compositions, puis exportez les résultats, données et rapports directement depuis Whistle Pro.",
-            image: ""
+                "Consultez les résultats, l’historique et les rapports sur grand écran après le coup de sifflet final.",
+            image: "assets/images/iphone-results.PNG",
+            alt: "Résultats Whistle Pro sur iPhone"
         }
     ],
 
+
     es: [
         {
-            title: "Planifica tus partidos",
+            kicker: "PREPARAR",
+            title: "Todo listo antes del saque inicial.",
             description:
-                "Importa tu calendario o crea partidos directamente en el iPhone. Equipos, campos y detalles estarán listos antes de llegar al terreno.",
-            image: ""
+                "Prepara partidos, equipos y calendario antes de llegar al campo.",
+            image: "assets/images/whistlepro-logo.png",
+            alt: "Whistle Pro"
         },
+
         {
-            title: "Arbitra. Whistle Pro se ocupa del resto.",
+            kicker: "ARBITRAR",
+            title: "Todo lo que necesitas en tu muñeca.",
             description:
-                "Tu Apple Watch gestiona el cronómetro, marcador, tarjetas, jugadores, pausas, prórrogas y tandas de penaltis.",
-            image: ""
+                "Cronómetro, marcador, tarjetas y eventos del partido permanecen a mano mientras arbitras.",
+            image: "assets/images/watch-report.png",
+            alt: "Whistle Pro en Apple Watch"
         },
+
         {
-            title: "Del calendario al informe",
+            kicker: "REVISAR",
+            title: "El partido continúa en tu iPhone.",
             description:
-                "Importa partidos y alineaciones, y luego exporta resultados, datos e informes directamente desde Whistle Pro.",
-            image: ""
+                "Consulta resultados, historial e informes en una pantalla más grande después del pitido final.",
+            image: "assets/images/iphone-results.PNG",
+            alt: "Resultados de Whistle Pro en iPhone"
         }
     ]
-
 };
 
 
 /* =========================================================
-   FEATURES
+   FEATURE LISTS
 ========================================================= */
 
 const featureLists = {
@@ -228,19 +243,19 @@ const featureLists = {
         watch: [
             "Smart match timer",
             "Automatic pauses",
-            "Goals and score tracking",
+            "Goal and score tracking",
             "Yellow and red cards",
             "Player numbers",
             "Overtime and shootouts",
             "End-of-period alerts",
             "Futsal accumulated fouls",
-            "Real-time Watch and iPhone synchronization"
+            "Real-time synchronization between Apple Watch and iPhone"
         ],
 
         phone: [
             "Complete match history",
             "Detailed match reports",
-            "Match review on a larger screen",
+            "Large-screen match review",
             "Upcoming match planning",
             "Team and roster management",
             "Field and category management"
@@ -262,7 +277,7 @@ const featureLists = {
             "Recurring expenses",
             "Mileage tracking",
             "Annual totals",
-            "CSV and Excel export"
+            "CSV and Excel exports"
         ]
     },
 
@@ -277,7 +292,7 @@ const featureLists = {
             "Prolongations et tirs au but",
             "Alertes de fin de période",
             "Fautes cumulées en futsal",
-            "Synchronisation Watch et iPhone en temps réel"
+            "Synchronisation en temps réel entre l’Apple Watch et l’iPhone"
         ],
 
         phone: [
@@ -285,7 +300,7 @@ const featureLists = {
             "Rapports de match détaillés",
             "Consultation sur grand écran",
             "Planification des matchs à venir",
-            "Gestion des équipes et des compositions",
+            "Gestion des équipes et compositions",
             "Gestion des terrains et catégories"
         ],
 
@@ -303,9 +318,9 @@ const featureLists = {
             "Repas",
             "Déplacements",
             "Dépenses récurrentes",
-            "Kilométrage",
+            "Suivi du kilométrage",
             "Totaux annuels",
-            "Export CSV et Excel"
+            "Exports CSV et Excel"
         ]
     },
 
@@ -320,7 +335,7 @@ const featureLists = {
             "Prórrogas y penaltis",
             "Alertas de fin de periodo",
             "Faltas acumuladas de futsal",
-            "Sincronización Watch-iPhone en tiempo real"
+            "Sincronización en tiempo real entre Apple Watch y iPhone"
         ],
 
         phone: [
@@ -351,7 +366,6 @@ const featureLists = {
             "Exportación CSV y Excel"
         ]
     }
-
 };
 
 
@@ -365,50 +379,42 @@ const tutorials = {
         {
             id: "match-setup",
             title: "Match setup",
-            description: "Prepare a match before heading onto the field.",
-            video: ""
+            description: "Prepare a match before heading onto the field."
         },
         {
             id: "import",
             title: "Import matches",
-            description: "Import scheduled matches from supported platforms.",
-            video: ""
+            description: "Import scheduled matches from supported platforms."
         },
         {
             id: "roster",
             title: "Roster management",
-            description: "Review and manage players and team staff.",
-            video: ""
+            description: "Review and manage players and team staff."
         },
         {
             id: "start-match",
             title: "Start a match",
-            description: "Launch your match and select the team taking kickoff.",
-            video: ""
+            description: "Start the match and select the team taking kickoff."
         },
         {
             id: "goals-cards",
             title: "Goals and cards",
-            description: "Record goals, cards and player numbers quickly.",
-            video: ""
+            description: "Record goals, cards and player numbers quickly."
         },
         {
             id: "match-end",
             title: "End a match",
-            description: "Finish periods, overtime and the complete match.",
-            video: ""
+            description: "Finish periods, overtime and the complete match."
         },
         {
             id: "export",
             title: "Export data",
-            description: "Export reports and match data in PDF, CSV or Excel.",
-            video: ""
+            description: "Export reports and match data in PDF, CSV or Excel."
         },
         {
             id: "expenses",
             title: "Expenses",
-            description: "Track referee expenses and mileage.",
-            video: ""
+            description: "Track referee expenses and mileage."
         }
     ],
 
@@ -417,50 +423,42 @@ const tutorials = {
         {
             id: "match-setup",
             title: "Préparer un match",
-            description: "Préparez votre match avant d’arriver sur le terrain.",
-            video: ""
+            description: "Préparez votre match avant d’arriver sur le terrain."
         },
         {
             id: "import",
             title: "Importer les matchs",
-            description: "Importez les matchs depuis les plateformes compatibles.",
-            video: ""
+            description: "Importez les matchs depuis les plateformes compatibles."
         },
         {
             id: "roster",
             title: "Gestion des compositions",
-            description: "Consultez et gérez les joueurs et membres du personnel.",
-            video: ""
+            description: "Consultez et gérez les joueurs et membres du personnel."
         },
         {
             id: "start-match",
             title: "Démarrer un match",
-            description: "Démarrez le match et sélectionnez l’équipe qui engage.",
-            video: ""
+            description: "Démarrez le match et sélectionnez l’équipe qui engage."
         },
         {
             id: "goals-cards",
             title: "Buts et cartons",
-            description: "Inscrivez rapidement les buts, cartons et numéros de joueurs.",
-            video: ""
+            description: "Inscrivez rapidement les buts, cartons et numéros de joueurs."
         },
         {
             id: "match-end",
             title: "Terminer le match",
-            description: "Gérez la fin des périodes, prolongations et du match.",
-            video: ""
+            description: "Gérez la fin des périodes, prolongations et du match."
         },
         {
             id: "export",
             title: "Exporter les données",
-            description: "Exportez vos rapports et données en PDF, CSV ou Excel.",
-            video: ""
+            description: "Exportez vos rapports et données en PDF, CSV ou Excel."
         },
         {
             id: "expenses",
             title: "Dépenses",
-            description: "Suivez vos dépenses d’arbitrage et votre kilométrage.",
-            video: ""
+            description: "Suivez vos dépenses d’arbitrage et votre kilométrage."
         }
     ],
 
@@ -469,288 +467,472 @@ const tutorials = {
         {
             id: "match-setup",
             title: "Preparar un partido",
-            description: "Prepara el partido antes de llegar al campo.",
-            video: ""
+            description: "Prepara el partido antes de llegar al campo."
         },
         {
             id: "import",
             title: "Importar partidos",
-            description: "Importa partidos desde plataformas compatibles.",
-            video: ""
+            description: "Importa partidos desde plataformas compatibles."
         },
         {
             id: "roster",
             title: "Gestión de plantillas",
-            description: "Consulta y gestiona jugadores y personal técnico.",
-            video: ""
+            description: "Consulta y gestiona jugadores y personal técnico."
         },
         {
             id: "start-match",
             title: "Iniciar un partido",
-            description: "Inicia el partido y selecciona el equipo que realiza el saque inicial.",
-            video: ""
+            description: "Inicia el partido y selecciona el equipo que realiza el saque inicial."
         },
         {
             id: "goals-cards",
             title: "Goles y tarjetas",
-            description: "Registra goles, tarjetas y números de jugador.",
-            video: ""
+            description: "Registra goles, tarjetas y números de jugador."
         },
         {
             id: "match-end",
             title: "Finalizar el partido",
-            description: "Gestiona el final de periodos, prórrogas y partido.",
-            video: ""
+            description: "Gestiona el final de periodos, prórrogas y partido."
         },
         {
             id: "export",
             title: "Exportar datos",
-            description: "Exporta informes y datos en PDF, CSV o Excel.",
-            video: ""
+            description: "Exporta informes y datos en PDF, CSV o Excel."
         },
         {
             id: "expenses",
             title: "Gastos",
-            description: "Controla gastos y kilometraje.",
-            video: ""
+            description: "Controla gastos y kilometraje."
         }
     ]
-
 };
 
 
 /* =========================================================
-   LEGAL CONTENT
+   PRIVACY POLICY
 ========================================================= */
 
-const legalContent = {
+const privacyPolicy = {
 
-    en: {
-        privacy: `
-            <h1>Privacy Policy</h1>
-            <p><strong>Last updated: August 2026</strong></p>
+    en: `
+        <h1>Privacy Policy – Whistle Pro</h1>
 
-            <h2>1. Data Collection</h2>
-            <p>
-                Whistle Pro does not collect personally identifiable information
-                such as your name, postal address or email address.
-            </p>
+        <p><strong>Last updated: October 1st, 2025</strong></p>
 
-            <p>
-                Match, calendar and configuration data are stored locally on
-                your iPhone and Apple Watch and may be synchronized using
-                Apple's services.
-            </p>
+        <p>
+            Whistle Pro respects the privacy of its users.
+            We do not collect, store, or share any personally identifiable information.
+        </p>
 
-            <h2>2. Apple Health and GPS</h2>
-            <p>
-                If enabled by the user, Whistle Pro may read or write
-                performance-related information using Apple HealthKit and may
-                use location services for field and mileage-related features.
-            </p>
+        <h2>1. Data Collection</h2>
 
-            <h2>3. Data Sharing</h2>
-            <p>
-                Whistle Pro does not sell user data and does not operate
-                advertising or tracking systems.
-            </p>
+        <p>
+            • Whistle Pro does not collect any personal information
+            (such as name, address, or email).
+        </p>
 
-            <h2>4. Exported Data</h2>
-            <p>
-                Match reports and exported files remain under the user's
-                control when they are generated or shared.
-            </p>
+        <p>
+            • Match, calendar, or performance data remain stored locally
+            on your device (Apple Watch or iPhone).
+        </p>
 
-            <h2>5. Contact</h2>
-            <p>
-                Privacy inquiries may be sent through the official
-                Whistle Pro support contact.
-            </p>
-        `,
+        <h2>2. Integration with Apple Health and GPS</h2>
 
-        notice: `
-            <h1>Legal Notice</h1>
+        <p>
+            • If you enable integration with Apple Health or GPS,
+            the app may read and write certain performance-related data.
+        </p>
 
-            <h2>Developer</h2>
-            <p>
-                Whistle Pro is developed and distributed by an independent
-                developer based in Blainville, Quebec, Canada.
-            </p>
+        <p>
+            • These data are managed exclusively by Apple via HealthKit
+            and remain under your control. Whistle Pro does not transmit
+            this information to any third party.
+        </p>
 
-            <h2>Purchases and subscriptions</h2>
-            <p>
-                Purchases and subscriptions are processed through Apple's
-                App Store. Pricing, renewals and refunds are subject to Apple's
-                applicable terms and policies.
-            </p>
+        <h2>3. iPhone – Apple Watch Synchronization</h2>
 
-            <h2>Availability</h2>
-            <p>
-                Certain external integrations may only be available in specific
-                countries or regions. Additional platform connectors are under
-                development.
-            </p>
+        <p>
+            • Information entered on the Watch may be synchronized
+            with the associated iPhone.
+        </p>
 
-            <h2>Governing law</h2>
-            <p>
-                The service is provided from Canada, subject to applicable
-                mandatory consumer protection legislation.
-            </p>
-        `
-    },
+        <p>
+            • Synchronization is handled using Apple’s secure mechanisms.
+        </p>
 
+        <p>
+            • No data are transmitted to external servers.
+        </p>
 
-    fr: {
-        privacy: `
-            <h1>Politique de confidentialité</h1>
-            <p><strong>Dernière mise à jour : août 2026</strong></p>
+        <h2>4. Data Sharing</h2>
 
-            <h2>1. Données collectées</h2>
-            <p>
-                Whistle Pro ne recueille aucune donnée personnelle identifiable
-                telle que votre nom, votre adresse postale ou votre adresse
-                courriel.
-            </p>
+        <p>
+            • Whistle Pro does not share any data with third parties.
+        </p>
 
-            <p>
-                Les données de match, de calendrier et de configuration sont
-                conservées localement sur votre iPhone et votre Apple Watch et
-                peuvent être synchronisées à l'aide des services Apple.
-            </p>
+        <p>
+            • Match reports in PDF are generated from local data only
+            and remain under your control when you choose to export them.
+        </p>
 
-            <h2>2. Apple Santé et GPS</h2>
-            <p>
-                Lorsque l'utilisateur les active, Whistle Pro peut lire ou
-                écrire certaines données de performance avec Apple HealthKit et
-                utiliser les services de localisation pour les fonctionnalités
-                liées aux terrains et au kilométrage.
-            </p>
+        <h2>5. Security</h2>
 
-            <h2>3. Partage des données</h2>
-            <p>
-                Whistle Pro ne vend aucune donnée utilisateur et n'utilise
-                aucun système publicitaire ou de suivi comportemental.
-            </p>
+        <p>
+            • All data remain stored locally on your Apple devices.
+        </p>
 
-            <h2>4. Données exportées</h2>
-            <p>
-                Les rapports de match et fichiers exportés demeurent sous le
-                contrôle de l'utilisateur lorsqu'ils sont générés ou partagés.
-            </p>
+        <p>
+            • Apple ensures the security and encryption of data related
+            to HealthKit and internal synchronizations.
+        </p>
 
-            <h2>5. Contact</h2>
-            <p>
-                Les demandes relatives à la confidentialité peuvent être
-                transmises par le canal officiel de soutien de Whistle Pro.
-            </p>
-        `,
+        <h2>6. Contact</h2>
 
-        notice: `
-            <h1>Mentions légales</h1>
-
-            <h2>Développeur</h2>
-            <p>
-                Whistle Pro est développé et distribué par un développeur
-                indépendant établi à Blainville, Québec, Canada.
-            </p>
-
-            <h2>Achats et abonnements</h2>
-            <p>
-                Les achats et abonnements sont traités par l'App Store d'Apple.
-                Les prix, renouvellements et remboursements sont soumis aux
-                modalités et politiques applicables d'Apple.
-            </p>
-
-            <h2>Disponibilité</h2>
-            <p>
-                Certaines intégrations externes peuvent être offertes seulement
-                dans certains pays ou régions. D'autres connecteurs sont
-                actuellement en développement.
-            </p>
-
-            <h2>Droit applicable</h2>
-            <p>
-                Le service est fourni depuis le Canada, sous réserve des lois
-                impératives applicables en matière de protection des
-                consommateurs.
-            </p>
-        `
-    },
+        <p>
+            For questions regarding this Privacy Policy,
+            please contact us at:
+            <a href="mailto:contact@whistlepro.com">
+                contact@whistlepro.com
+            </a>
+        </p>
+    `,
 
 
-    es: {
-        privacy: `
-            <h1>Política de privacidad</h1>
-            <p><strong>Última actualización: agosto de 2026</strong></p>
+    fr: `
+        <h1>Politique de confidentialité – Whistle Pro</h1>
 
-            <h2>1. Recopilación de datos</h2>
-            <p>
-                Whistle Pro no recopila información personal identificable
-                como nombre, dirección postal o correo electrónico.
-            </p>
+        <p><strong>Dernière mise à jour : 1er octobre 2025</strong></p>
 
-            <p>
-                Los datos de partidos, calendario y configuración se almacenan
-                localmente en el iPhone y Apple Watch y pueden sincronizarse
-                mediante servicios de Apple.
-            </p>
+        <p>
+            Whistle Pro respecte la vie privée de ses utilisateurs.
+            L’application ne recueille, ne stocke et ne partage aucune
+            donnée personnelle identifiable.
+        </p>
 
-            <h2>2. Apple Health y GPS</h2>
-            <p>
-                Si el usuario lo activa, Whistle Pro puede leer o escribir
-                determinados datos de rendimiento mediante Apple HealthKit y
-                utilizar la ubicación para funciones relacionadas con campos
-                y kilometraje.
-            </p>
+        <h2>1. Données collectées</h2>
 
-            <h2>3. Compartición de datos</h2>
-            <p>
-                Whistle Pro no vende datos de usuarios y no utiliza sistemas
-                publicitarios ni de seguimiento.
-            </p>
+        <p>
+            • Whistle Pro ne collecte aucune information personnelle
+            (nom, adresse, courriel, etc.).
+        </p>
 
-            <h2>4. Datos exportados</h2>
-            <p>
-                Los informes y archivos exportados permanecen bajo el control
-                del usuario.
-            </p>
+        <p>
+            • Les données de match, de calendrier ou de performance
+            restent stockées localement sur votre appareil
+            (Apple Watch ou iPhone).
+        </p>
 
-            <h2>5. Contacto</h2>
-            <p>
-                Las consultas de privacidad pueden enviarse mediante el canal
-                oficial de soporte de Whistle Pro.
-            </p>
-        `,
+        <h2>2. Intégration avec Apple Santé et GPS</h2>
 
-        notice: `
-            <h1>Aviso legal</h1>
+        <p>
+            • Si vous activez l’intégration avec Apple Santé ou le GPS,
+            l’application peut lire et écrire certaines données liées
+            à vos performances.
+        </p>
 
-            <h2>Desarrollador</h2>
-            <p>
-                Whistle Pro es desarrollado y distribuido por un desarrollador
-                independiente con sede en Blainville, Quebec, Canadá.
-            </p>
+        <p>
+            • Ces données sont gérées exclusivement par Apple via HealthKit
+            et demeurent sous votre contrôle. Whistle Pro ne transmet
+            ces informations à aucun tiers.
+        </p>
 
-            <h2>Compras y suscripciones</h2>
-            <p>
-                Las compras y suscripciones se procesan mediante Apple App
-                Store y están sujetas a sus términos y políticas.
-            </p>
+        <h2>3. Synchronisation iPhone – Apple Watch</h2>
 
-            <h2>Disponibilidad</h2>
-            <p>
-                Algunas integraciones externas pueden estar disponibles solo en
-                determinados países o regiones.
-            </p>
+        <p>
+            • Les informations saisies sur la montre peuvent être
+            synchronisées avec l’iPhone associé.
+        </p>
 
-            <h2>Ley aplicable</h2>
-            <p>
-                El servicio se presta desde Canadá, sujeto a la legislación
-                obligatoria aplicable de protección al consumidor.
-            </p>
-        `
-    }
+        <p>
+            • Cette synchronisation s’effectue via les mécanismes
+            sécurisés fournis par Apple.
+        </p>
 
+        <p>
+            • Aucune donnée n’est transmise à des serveurs externes.
+        </p>
+
+        <h2>4. Partage de données</h2>
+
+        <p>
+            • Whistle Pro ne partage aucune donnée avec des tiers.
+        </p>
+
+        <p>
+            • Les rapports de match en PDF sont générés uniquement
+            à partir de vos données locales et demeurent sous votre
+            contrôle lorsque vous choisissez de les exporter.
+        </p>
+
+        <h2>5. Sécurité</h2>
+
+        <p>
+            • Toutes les données restent stockées localement
+            sur vos appareils Apple.
+        </p>
+
+        <p>
+            • Apple assure la sécurité et le chiffrement des données
+            liées à HealthKit et aux synchronisations internes.
+        </p>
+
+        <h2>6. Contact</h2>
+
+        <p>
+            Pour toute question concernant cette politique de confidentialité,
+            vous pouvez nous contacter à :
+            <a href="mailto:contact@whistlepro.com">
+                contact@whistlepro.com
+            </a>
+        </p>
+    `,
+
+
+    es: `
+        <h1>Política de privacidad – Whistle Pro</h1>
+
+        <p>
+            La versión oficial de esta política de privacidad está disponible
+            en inglés y francés.
+        </p>
+
+        <p>
+            Whistle Pro no recopila, almacena ni comparte información
+            personal identificable.
+        </p>
+
+        <p>
+            Los datos de partidos, calendarios y rendimiento permanecen
+            almacenados localmente en el iPhone y Apple Watch.
+        </p>
+
+        <p>
+            Las funciones relacionadas con Apple Health y GPS solo se utilizan
+            cuando el usuario las activa.
+        </p>
+
+        <p>
+            Para cualquier consulta:
+            <a href="mailto:contact@whistlepro.com">
+                contact@whistlepro.com
+            </a>
+        </p>
+    `
+};
+
+
+/* =========================================================
+   LEGAL NOTICE / EUROPE
+========================================================= */
+
+const legalNotice = {
+
+    en: `
+        <h1>Legal Notice and Privacy Policy</h1>
+
+        <h2>1. Developer Identity</h2>
+
+        <p>
+            WhistlePro is developed and distributed by:<br>
+            M Lefebvre<br>
+            Independent developer – Mobile applications<br>
+            Blainville, Quebec (Canada)
+        </p>
+
+        <p>
+            All purchases and subscriptions are handled by Apple App Store,
+            which acts as the official merchant of record for EU consumers.
+        </p>
+
+        <h2>2. Subscription and Purchase Terms</h2>
+
+        <p>
+            WhistlePro subscriptions are offered through the App Store.
+            Prices, automatic renewals, and refunds are managed directly
+            by Apple under their own terms of service.
+        </p>
+
+        <p>
+            Refund requests must be submitted via the App Store
+            &gt; Purchase History &gt; Report a Problem.
+        </p>
+
+        <h2>3. Data Protection and Privacy (GDPR)</h2>
+
+        <p>
+            WhistlePro only collects data strictly necessary for the app’s operation:
+        </p>
+
+        <ul>
+            <li>Local match and configuration data;</li>
+            <li>
+                Activity data (distance, heart rate, calories, etc.)
+                only if the user enables HealthKit;
+            </li>
+            <li>
+                GPS location only if the user enables it to calculate
+                distance between home and fields.
+            </li>
+        </ul>
+
+        <p>
+            No data is sold, shared, or transmitted to any third party.
+            All user data remains on the user’s devices or iCloud,
+            secured through Apple’s services.
+            No personal data is hosted or retained by the developer.
+        </p>
+
+        <p>
+            EU users have the right to access, rectify, and erase their data
+            in accordance with Regulation (EU) 2016/679.
+            Requests may be sent to
+            <a href="mailto:privacy@whistlepro.app">
+                privacy@whistlepro.app
+            </a>.
+        </p>
+
+        <h2>4. Consumer Rights (Directive 2011/83/EU)</h2>
+
+        <p>
+            Under EU consumer protection law, the right of withdrawal
+            does not apply to digital services once execution has begun
+            with the user’s consent.
+        </p>
+
+        <p>
+            All billing, renewal, and refund matters are handled directly
+            by Apple App Store Support.
+        </p>
+
+        <h2>5. Governing Law</h2>
+
+        <p>
+            This service is provided from Canada.
+            Contractual relationships are governed by Canadian law,
+            without prejudice to mandatory consumer protection rights
+            under EU law.
+        </p>
+    `,
+
+
+    fr: `
+        <h1>Mentions légales et politique de confidentialité</h1>
+
+        <h2>1. Identité du développeur</h2>
+
+        <p>
+            WhistlePro est développé et distribué par :<br>
+            M Lefebvre<br>
+            Travailleur autonome – Développement d’applications mobiles<br>
+            Blainville, Québec (Canada)
+        </p>
+
+        <p>
+            Les abonnements et paiements sont gérés exclusivement
+            par Apple App Store, qui agit comme vendeur officiel
+            (“merchant of record”) pour les consommateurs européens.
+        </p>
+
+        <h2>2. Conditions d’abonnement et d’achat</h2>
+
+        <p>
+            Les abonnements à WhistlePro sont proposés via l’App Store.
+            Les tarifs, renouvellements automatiques et remboursements
+            sont gérés directement par Apple conformément à leurs
+            conditions de service.
+        </p>
+
+        <p>
+            Toute demande de remboursement doit être effectuée via
+            l’App Store &gt; Historique des achats &gt; Signaler un problème.
+        </p>
+
+        <h2>3. Protection des données et confidentialité (RGPD)</h2>
+
+        <p>
+            WhistlePro collecte uniquement les données strictement
+            nécessaires à son fonctionnement :
+        </p>
+
+        <ul>
+            <li>Données locales de match, chronomètres et configurations ;</li>
+            <li>
+                Données d’activité physique
+                (distance, rythme cardiaque, calories, etc.)
+                uniquement si l’utilisateur active HealthKit ;
+            </li>
+            <li>
+                Localisation GPS, uniquement si l’utilisateur active
+                le GPS pour calculer la distance entre les terrains
+                et le domicile.
+            </li>
+        </ul>
+
+        <p>
+            Aucune donnée n’est vendue, partagée ni transmise à des tiers.
+            Les données restent stockées localement sur les appareils
+            de l’utilisateur ou dans iCloud via les mécanismes sécurisés d’Apple.
+            Aucune donnée n’est hébergée ni conservée par le développeur.
+        </p>
+
+        <p>
+            Les utilisateurs européens disposent d’un droit d’accès,
+            de rectification et de suppression de leurs données conformément
+            au Règlement (UE) 2016/679.
+            Toute demande peut être adressée à
+            <a href="mailto:privacy@whistlepro.app">
+                privacy@whistlepro.app
+            </a>.
+        </p>
+
+        <h2>4. Droits des consommateurs (Directive 2011/83/UE)</h2>
+
+        <p>
+            Conformément à la directive européenne sur les droits
+            des consommateurs, le droit de rétractation ne s’applique pas
+            aux services numériques déjà exécutés avec le consentement
+            de l’utilisateur.
+        </p>
+
+        <p>
+            Toute question relative à un paiement, un renouvellement
+            ou une annulation doit être adressée à Apple App Store Support.
+        </p>
+
+        <h2>5. Droit applicable</h2>
+
+        <p>
+            Ce service est fourni depuis le Canada.
+            Les relations contractuelles sont régies par le droit canadien,
+            sans préjudice des protections légales obligatoires applicables
+            aux consommateurs européens.
+        </p>
+    `,
+
+
+    es: `
+        <h1>Aviso legal</h1>
+
+        <p>
+            La versión oficial de este documento está disponible
+            en inglés y francés.
+        </p>
+
+        <p>
+            WhistlePro es desarrollado y distribuido por un desarrollador
+            independiente con sede en Blainville, Quebec, Canadá.
+        </p>
+
+        <p>
+            Las compras y suscripciones se gestionan mediante Apple App Store.
+        </p>
+
+        <p>
+            Los usuarios europeos conservan sus derechos en virtud
+            del Reglamento (UE) 2016/679 y de la legislación aplicable
+            de protección al consumidor.
+        </p>
+    `
 };
 
 
@@ -766,77 +948,118 @@ let currentTutorial = 0;
 
 let slideTimer = null;
 
-let currentLegalSection = "privacy";
+
+/* =========================================================
+   DOM
+========================================================= */
+
+const heroImage =
+    document.getElementById("heroImage");
+
+const heroKicker =
+    document.getElementById("heroKicker");
+
+const heroTitle =
+    document.getElementById("heroTitle");
+
+const heroDescription =
+    document.getElementById("heroDescription");
+
+const featureButtons =
+    document.querySelectorAll("[data-slide]");
+
+const indicators =
+    document.querySelectorAll(".indicator");
+
+const languageSelector =
+    document.getElementById("languageSelector");
+
+const menuButton =
+    document.getElementById("menuButton");
+
+const closeMenuButton =
+    document.getElementById("closeMenuButton");
+
+const mainMenu =
+    document.getElementById("mainMenu");
+
+const menuOverlay =
+    document.getElementById("menuOverlay");
+
+const tutorialSelector =
+    document.getElementById("tutorialSelector");
+
+const tutorialList =
+    document.getElementById("tutorialList");
+
+const tutorialTitle =
+    document.getElementById("tutorialTitle");
+
+const tutorialDescription =
+    document.getElementById("tutorialDescription");
+
+const tutorialVideoLabel =
+    document.getElementById("tutorialVideoLabel");
+
+const privacyContentContainer =
+    document.getElementById("privacyContent");
+
+const legalContentContainer =
+    document.getElementById("legalContent");
 
 
 /* =========================================================
-   DOM REFERENCES
+   INIT
 ========================================================= */
 
-const heroTitle = document.getElementById("heroTitle");
-const heroDescription = document.getElementById("heroDescription");
-const heroImage = document.getElementById("heroImage");
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
 
-const featureButtons = document.querySelectorAll("[data-slide]");
+        languageSelector.value =
+            currentLanguage;
 
-const indicators = document.querySelectorAll(".indicator");
+        document.documentElement.lang =
+            currentLanguage;
 
-const languageSelector = document.getElementById("languageSelector");
-
-const menuButton = document.getElementById("menuButton");
-const closeMenuButton = document.getElementById("closeMenuButton");
-const mainMenu = document.getElementById("mainMenu");
-const menuOverlay = document.getElementById("menuOverlay");
-
-const tutorialSelector = document.getElementById("tutorialSelector");
-const tutorialList = document.getElementById("tutorialList");
-
-const tutorialTitle = document.getElementById("tutorialTitle");
-const tutorialDescription = document.getElementById("tutorialDescription");
-const tutorialVideoLabel = document.getElementById("tutorialVideoLabel");
-
-const legalContentContainer = document.getElementById("legalContent");
-
-const privacyTab = document.getElementById("privacyTab");
-const legalTab = document.getElementById("legalTab");
+        document.getElementById(
+            "currentYear"
+        ).textContent =
+            new Date().getFullYear();
 
 
-/* =========================================================
-   INITIALIZATION
-========================================================= */
+        document.getElementById(
+            "appStoreButton"
+        ).href =
+            APP_STORE_URL;
 
-document.addEventListener("DOMContentLoaded", () => {
 
-    languageSelector.value = currentLanguage;
+        document.getElementById(
+            "menuAppStoreButton"
+        ).href =
+            APP_STORE_URL;
 
-    document.documentElement.lang = currentLanguage;
 
-    document.getElementById("currentYear").textContent =
-        new Date().getFullYear();
+        updateTranslations();
 
-    document.getElementById("appStoreButton").href =
-        APP_STORE_URL;
+        renderFeatures();
 
-    document.getElementById("menuAppStoreButton").href =
-        APP_STORE_URL;
+        renderTutorialNavigation();
 
-    updateTranslations();
+        renderTutorial();
 
-    renderFeatures();
+        renderPrivacy();
 
-    renderTutorialNavigation();
+        renderLegal();
 
-    renderTutorial();
+        showSlide(0);
 
-    renderLegalContent();
+        startSlideshow();
 
-    showSlide(0);
+        handleURL();
 
-    startSlideshow();
-
-    handleURL();
-
-});
+    }
+);
 
 
 /* =========================================================
@@ -845,65 +1068,84 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function detectLanguage() {
 
-    const savedLanguage =
-        localStorage.getItem("whistleProLanguage");
+    const saved =
+        localStorage.getItem(
+            "whistleProLanguage"
+        );
+
 
     if (
-        savedLanguage === "en" ||
-        savedLanguage === "fr" ||
-        savedLanguage === "es"
+        saved === "en" ||
+        saved === "fr" ||
+        saved === "es"
     ) {
-        return savedLanguage;
+        return saved;
     }
 
 
-    const browserLanguage =
+    const browser =
         navigator.language.toLowerCase();
 
 
-    if (browserLanguage.startsWith("fr")) {
+    if (
+        browser.startsWith("fr")
+    ) {
         return "fr";
     }
 
-    if (browserLanguage.startsWith("es")) {
+
+    if (
+        browser.startsWith("es")
+    ) {
         return "es";
     }
+
 
     return "en";
 }
 
 
-languageSelector.addEventListener("change", event => {
+languageSelector.addEventListener(
+    "change",
+    event => {
 
-    currentLanguage = event.target.value;
+        currentLanguage =
+            event.target.value;
 
-    localStorage.setItem(
-        "whistleProLanguage",
-        currentLanguage
-    );
 
-    document.documentElement.lang =
-        currentLanguage;
+        localStorage.setItem(
+            "whistleProLanguage",
+            currentLanguage
+        );
 
-    updateTranslations();
 
-    renderFeatures();
+        document.documentElement.lang =
+            currentLanguage;
 
-    renderTutorialNavigation();
 
-    renderTutorial();
+        updateTranslations();
 
-    renderLegalContent();
+        renderFeatures();
 
-    showSlide(currentSlide);
+        renderTutorialNavigation();
 
-});
+        renderTutorial();
+
+        renderPrivacy();
+
+        renderLegal();
+
+        showSlide(currentSlide);
+
+    }
+);
 
 
 function updateTranslations() {
 
     const dictionary =
         translations[currentLanguage];
+
 
     document
         .querySelectorAll("[data-i18n]")
@@ -912,18 +1154,20 @@ function updateTranslations() {
             const key =
                 element.dataset.i18n;
 
-            if (dictionary[key]) {
+
+            if (
+                dictionary[key]
+            ) {
                 element.textContent =
                     dictionary[key];
             }
 
         });
-
 }
 
 
 /* =========================================================
-   HOME SLIDESHOW
+   HERO
 ========================================================= */
 
 function showSlide(index) {
@@ -931,53 +1175,51 @@ function showSlide(index) {
     const languageSlides =
         slides[currentLanguage];
 
+
     currentSlide =
         index % languageSlides.length;
+
 
     const slide =
         languageSlides[currentSlide];
 
 
-    heroTitle.textContent =
-        slide.title;
-
-    heroDescription.textContent =
-        slide.description;
+    heroImage.style.opacity =
+        "0";
 
 
-    if (slide.image) {
+    setTimeout(
+        () => {
 
-        heroImage.src =
-            slide.image;
+            heroImage.src =
+                slide.image;
 
-        heroImage.alt =
-            slide.title;
+            heroImage.alt =
+                slide.alt;
 
-        heroImage.hidden =
-            false;
+            heroKicker.textContent =
+                slide.kicker;
 
-        document.querySelector(
-            ".media-placeholder"
-        ).style.display = "none";
+            heroTitle.textContent =
+                slide.title;
 
-    } else {
+            heroDescription.textContent =
+                slide.description;
 
-        heroImage.hidden =
-            true;
+            heroImage.style.opacity =
+                "1";
 
-        document.querySelector(
-            ".media-placeholder"
-        ).style.display = "flex";
-
-    }
+        },
+        160
+    );
 
 
     featureButtons.forEach(
-        (button, index) => {
+        (button, buttonIndex) => {
 
             button.classList.toggle(
                 "active",
-                index === currentSlide
+                buttonIndex === currentSlide
             );
 
         }
@@ -985,16 +1227,15 @@ function showSlide(index) {
 
 
     indicators.forEach(
-        (indicator, index) => {
+        (indicator, indicatorIndex) => {
 
             indicator.classList.toggle(
                 "active",
-                index === currentSlide
+                indicatorIndex === currentSlide
             );
 
         }
     );
-
 }
 
 
@@ -1004,7 +1245,6 @@ function nextSlide() {
         (currentSlide + 1) %
         slides[currentLanguage].length
     );
-
 }
 
 
@@ -1012,47 +1252,60 @@ function startSlideshow() {
 
     stopSlideshow();
 
+
     slideTimer =
         setInterval(
             nextSlide,
             SLIDE_DURATION
         );
-
 }
 
 
 function stopSlideshow() {
 
-    if (slideTimer) {
+    if (
+        slideTimer
+    ) {
 
-        clearInterval(slideTimer);
+        clearInterval(
+            slideTimer
+        );
 
-        slideTimer = null;
+        slideTimer =
+            null;
 
     }
-
 }
 
 
-featureButtons.forEach(button => {
+featureButtons.forEach(
+    button => {
 
-    button.addEventListener("click", () => {
+        button.addEventListener(
+            "click",
+            () => {
 
-        const index =
-            Number(button.dataset.slide);
+                const index =
+                    Number(
+                        button.dataset.slide
+                    );
 
-        showSlide(index);
 
-        stopSlideshow();
+                showSlide(index);
 
-        setTimeout(
-            startSlideshow,
-            15000
+                stopSlideshow();
+
+
+                setTimeout(
+                    startSlideshow,
+                    15000
+                );
+
+            }
         );
 
-    });
-
-});
+    }
+);
 
 
 /* =========================================================
@@ -1061,36 +1314,41 @@ featureButtons.forEach(button => {
 
 document
     .querySelectorAll("[data-view]")
-    .forEach(element => {
+    .forEach(
+        element => {
 
-        element.addEventListener(
-            "click",
-            () => {
+            element.addEventListener(
+                "click",
+                () => {
 
-                const view =
-                    element.dataset.view;
+                    const view =
+                        element.dataset.view;
 
-                showView(view);
 
-                closeMenu();
+                    showView(view);
 
-            }
-        );
+                    closeMenu();
 
-    });
+                }
+            );
+
+        }
+    );
 
 
 function showView(viewName) {
 
     document
         .querySelectorAll(".view")
-        .forEach(view => {
+        .forEach(
+            view => {
 
-            view.classList.remove(
-                "active-view"
-            );
+                view.classList.remove(
+                    "active-view"
+                );
 
-        });
+            }
+        );
 
 
     const target =
@@ -1099,11 +1357,14 @@ function showView(viewName) {
         );
 
 
-    if (target) {
+    if (
+        target
+    ) {
 
         target.classList.add(
             "active-view"
         );
+
 
         window.history.replaceState(
             null,
@@ -1114,7 +1375,9 @@ function showView(viewName) {
     }
 
 
-    if (viewName === "home") {
+    if (
+        viewName === "home"
+    ) {
 
         startSlideshow();
 
@@ -1123,7 +1386,6 @@ function showView(viewName) {
         stopSlideshow();
 
     }
-
 }
 
 
@@ -1136,10 +1398,12 @@ menuButton.addEventListener(
     openMenu
 );
 
+
 closeMenuButton.addEventListener(
     "click",
     closeMenu
 );
+
 
 menuOverlay.addEventListener(
     "click",
@@ -1149,29 +1413,35 @@ menuOverlay.addEventListener(
 
 function openMenu() {
 
-    mainMenu.classList.add("open");
+    mainMenu.classList.add(
+        "open"
+    );
 
-    menuOverlay.classList.add("visible");
+    menuOverlay.classList.add(
+        "open"
+    );
 
     mainMenu.setAttribute(
         "aria-hidden",
         "false"
     );
-
 }
 
 
 function closeMenu() {
 
-    mainMenu.classList.remove("open");
+    mainMenu.classList.remove(
+        "open"
+    );
 
-    menuOverlay.classList.remove("visible");
+    menuOverlay.classList.remove(
+        "open"
+    );
 
     mainMenu.setAttribute(
         "aria-hidden",
         "true"
     );
-
 }
 
 
@@ -1190,42 +1460,60 @@ function renderFeatures() {
         features.watch
     );
 
+
     renderList(
         "phoneFeatures",
         features.phone
     );
+
 
     renderList(
         "dataFeatures",
         features.data
     );
 
+
     renderList(
         "expenseFeatures",
         features.expenses
     );
-
 }
 
 
-function renderList(elementId, items) {
+function renderList(
+    elementId,
+    items
+) {
 
     const list =
-        document.getElementById(elementId);
+        document.getElementById(
+            elementId
+        );
 
-    list.innerHTML = "";
 
-    items.forEach(item => {
+    list.innerHTML =
+        "";
 
-        const li =
-            document.createElement("li");
 
-        li.textContent = item;
+    items.forEach(
+        item => {
 
-        list.appendChild(li);
+            const li =
+                document.createElement(
+                    "li"
+                );
 
-    });
 
+            li.textContent =
+                item;
+
+
+            list.appendChild(
+                li
+            );
+
+        }
+    );
 }
 
 
@@ -1239,9 +1527,12 @@ function renderTutorialNavigation() {
         tutorials[currentLanguage];
 
 
-    tutorialList.innerHTML = "";
+    tutorialList.innerHTML =
+        "";
 
-    tutorialSelector.innerHTML = "";
+
+    tutorialSelector.innerHTML =
+        "";
 
 
     languageTutorials.forEach(
@@ -1249,13 +1540,18 @@ function renderTutorialNavigation() {
 
 
             const button =
-                document.createElement("button");
+                document.createElement(
+                    "button"
+                );
+
 
             button.type =
                 "button";
 
+
             button.textContent =
                 tutorial.title;
+
 
             button.classList.toggle(
                 "active",
@@ -1269,6 +1565,7 @@ function renderTutorialNavigation() {
 
                     currentTutorial =
                         index;
+
 
                     renderTutorialNavigation();
 
@@ -1286,13 +1583,18 @@ function renderTutorialNavigation() {
 
 
             const option =
-                document.createElement("option");
+                document.createElement(
+                    "option"
+                );
+
 
             option.value =
                 index;
 
+
             option.textContent =
                 tutorial.title;
+
 
             tutorialSelector.appendChild(
                 option
@@ -1304,7 +1606,6 @@ function renderTutorialNavigation() {
 
     tutorialSelector.value =
         currentTutorial;
-
 }
 
 
@@ -1313,7 +1614,10 @@ tutorialSelector.addEventListener(
     event => {
 
         currentTutorial =
-            Number(event.target.value);
+            Number(
+                event.target.value
+            );
+
 
         renderTutorialNavigation();
 
@@ -1335,12 +1639,13 @@ function renderTutorial() {
     tutorialTitle.textContent =
         tutorial.title;
 
+
     tutorialDescription.textContent =
         tutorial.description;
 
+
     tutorialVideoLabel.textContent =
         tutorial.title;
-
 }
 
 
@@ -1350,12 +1655,23 @@ function updateTutorialURL() {
         tutorials[currentLanguage]
         [currentTutorial];
 
+
     window.history.replaceState(
         null,
         "",
         `#tutorials/${tutorial.id}`
     );
+}
 
+
+/* =========================================================
+   PRIVACY
+========================================================= */
+
+function renderPrivacy() {
+
+    privacyContentContainer.innerHTML =
+        privacyPolicy[currentLanguage];
 }
 
 
@@ -1363,55 +1679,15 @@ function updateTutorialURL() {
    LEGAL
 ========================================================= */
 
-privacyTab.addEventListener(
-    "click",
-    () => {
-
-        currentLegalSection =
-            "privacy";
-
-        renderLegalContent();
-
-    }
-);
-
-
-legalTab.addEventListener(
-    "click",
-    () => {
-
-        currentLegalSection =
-            "notice";
-
-        renderLegalContent();
-
-    }
-);
-
-
-function renderLegalContent() {
+function renderLegal() {
 
     legalContentContainer.innerHTML =
-        legalContent[currentLanguage]
-        [currentLegalSection];
-
-
-    privacyTab.classList.toggle(
-        "active",
-        currentLegalSection === "privacy"
-    );
-
-
-    legalTab.classList.toggle(
-        "active",
-        currentLegalSection === "notice"
-    );
-
+        legalNotice[currentLanguage];
 }
 
 
 /* =========================================================
-   URL / DEEP LINKING
+   URL
 ========================================================= */
 
 function handleURL() {
@@ -1423,9 +1699,13 @@ function handleURL() {
         );
 
 
-    if (!hash) {
+    if (
+        !hash
+    ) {
 
-        showView("home");
+        showView(
+            "home"
+        );
 
         return;
 
@@ -1441,6 +1721,7 @@ function handleURL() {
         const tutorialId =
             hash.split("/")[1];
 
+
         const index =
             tutorials[currentLanguage]
             .findIndex(
@@ -1450,10 +1731,13 @@ function handleURL() {
             );
 
 
-        if (index >= 0) {
+        if (
+            index >= 0
+        ) {
 
             currentTutorial =
                 index;
+
 
             renderTutorialNavigation();
 
@@ -1462,7 +1746,10 @@ function handleURL() {
         }
 
 
-        showView("tutorials");
+        showView(
+            "tutorials"
+        );
+
 
         return;
 
@@ -1474,22 +1761,28 @@ function handleURL() {
         "presentation",
         "tutorials",
         "features",
+        "privacy",
         "legal"
     ];
 
 
     if (
-        validViews.includes(hash)
+        validViews.includes(
+            hash
+        )
     ) {
 
-        showView(hash);
+        showView(
+            hash
+        );
 
     } else {
 
-        showView("home");
+        showView(
+            "home"
+        );
 
     }
-
 }
 
 
@@ -1500,7 +1793,7 @@ window.addEventListener(
 
 
 /* =========================================================
-   KEYBOARD ACCESSIBILITY
+   KEYBOARD
 ========================================================= */
 
 document.addEventListener(
