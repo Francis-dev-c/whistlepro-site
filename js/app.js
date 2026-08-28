@@ -8,7 +8,6 @@
 ========================================================= */
 
 const APP_STORE_URL = "#";
-
 const SLIDE_DURATION = 6000;
 
 
@@ -24,9 +23,10 @@ const translations = {
         menuHome: "Home",
         menuPresentation: "Presentation",
         menuTutorials: "Tutorials",
-        menuPrivacy: "Privacy Policy",
-        menuLegal: "Legal Notice",
         menuDownload: "Download on the App Store",
+
+        menuPrivacy: "Privacy Policy",
+        menuLegal: "European Privacy Policy",
 
         featurePrepare: "Prepare",
         featureReferee: "Referee",
@@ -63,9 +63,10 @@ const translations = {
         menuHome: "Accueil",
         menuPresentation: "Présentation",
         menuTutorials: "Tutoriels",
-        menuPrivacy: "Politique de confidentialité",
-        menuLegal: "Mentions légales",
         menuDownload: "Télécharger sur l’App Store",
+
+        menuPrivacy: "Politique de confidentialité",
+        menuLegal: "Politique de confidentialité Européenne",
 
         featurePrepare: "Préparer",
         featureReferee: "Arbitrer",
@@ -102,9 +103,10 @@ const translations = {
         menuHome: "Inicio",
         menuPresentation: "Presentación",
         menuTutorials: "Tutoriales",
-        menuPrivacy: "Política de privacidad",
-        menuLegal: "Aviso legal",
         menuDownload: "Descargar en App Store",
+
+        menuPrivacy: "Política de privacidad",
+        menuLegal: "Política de privacidad europea",
 
         featurePrepare: "Preparar",
         featureReferee: "Arbitrar",
@@ -148,8 +150,8 @@ const slides = {
             title: "Everything ready before kickoff.",
             description:
                 "Plan your matches, teams and schedule before stepping onto the field.",
-            image: "assets/images/whistlepro-logo.png",
-            alt: "Whistle Pro"
+            image: "assets/images/watch-report.png",
+            alt: "Whistle Pro match report on Apple Watch"
         },
 
         {
@@ -157,8 +159,8 @@ const slides = {
             title: "Everything you need on your wrist.",
             description:
                 "Timer, score, cards and match events stay close at hand while you focus on refereeing.",
-            image: "assets/images/watch-report.png",
-            alt: "Whistle Pro running on Apple Watch"
+            image: "assets/images/watch-timer.jpg",
+            alt: "Whistle Pro match timer on Apple Watch"
         },
 
         {
@@ -178,8 +180,8 @@ const slides = {
             title: "Tout est prêt avant le coup d’envoi.",
             description:
                 "Préparez vos matchs, vos équipes et votre calendrier avant d’arriver sur le terrain.",
-            image: "assets/images/whistlepro-logo.png",
-            alt: "Whistle Pro"
+            image: "assets/images/watch-report.png",
+            alt: "Rapport de match Whistle Pro sur Apple Watch"
         },
 
         {
@@ -187,8 +189,8 @@ const slides = {
             title: "Tout ce qu’il vous faut au poignet.",
             description:
                 "Chrono, score, cartons et événements du match restent à portée de main pendant que vous arbitrez.",
-            image: "assets/images/watch-report.png",
-            alt: "Whistle Pro sur Apple Watch"
+            image: "assets/images/watch-timer.jpg",
+            alt: "Chronomètre Whistle Pro sur Apple Watch"
         },
 
         {
@@ -208,8 +210,8 @@ const slides = {
             title: "Todo listo antes del saque inicial.",
             description:
                 "Prepara partidos, equipos y calendario antes de llegar al campo.",
-            image: "assets/images/whistlepro-logo.png",
-            alt: "Whistle Pro"
+            image: "assets/images/watch-report.png",
+            alt: "Informe de partido Whistle Pro en Apple Watch"
         },
 
         {
@@ -217,8 +219,8 @@ const slides = {
             title: "Todo lo que necesitas en tu muñeca.",
             description:
                 "Cronómetro, marcador, tarjetas y eventos del partido permanecen a mano mientras arbitras.",
-            image: "assets/images/watch-report.png",
-            alt: "Whistle Pro en Apple Watch"
+            image: "assets/images/watch-timer.jpg",
+            alt: "Cronómetro Whistle Pro en Apple Watch"
         },
 
         {
@@ -589,8 +591,7 @@ const privacyPolicy = {
         <h2>6. Contact</h2>
 
         <p>
-            For questions regarding this Privacy Policy,
-            please contact us at:
+            For questions regarding this Privacy Policy, please contact us at:
             <a href="mailto:contact@whistlepro.com">
                 contact@whistlepro.com
             </a>
@@ -691,28 +692,66 @@ const privacyPolicy = {
     es: `
         <h1>Política de privacidad – Whistle Pro</h1>
 
+        <p><strong>Última actualización: 1 de octubre de 2025</strong></p>
+
         <p>
-            La versión oficial de esta política de privacidad está disponible
-            en inglés y francés.
+            Whistle Pro respeta la privacidad de sus usuarios.
+            La aplicación no recopila, almacena ni comparte
+            información personal identificable.
+        </p>
+
+        <h2>1. Recopilación de datos</h2>
+
+        <p>
+            • Whistle Pro no recopila información personal
+            como nombre, dirección o correo electrónico.
         </p>
 
         <p>
-            Whistle Pro no recopila, almacena ni comparte información
-            personal identificable.
+            • Los datos de partidos, calendarios y rendimiento
+            permanecen almacenados localmente en tu Apple Watch o iPhone.
+        </p>
+
+        <h2>2. Apple Health y GPS</h2>
+
+        <p>
+            • Si activas Apple Health o GPS, la aplicación puede leer
+            y escribir determinados datos relacionados con el rendimiento.
         </p>
 
         <p>
-            Los datos de partidos, calendarios y rendimiento permanecen
-            almacenados localmente en el iPhone y Apple Watch.
+            • Estos datos permanecen bajo tu control y no se transmiten
+            a terceros.
+        </p>
+
+        <h2>3. Sincronización iPhone – Apple Watch</h2>
+
+        <p>
+            • La información introducida en el Apple Watch puede sincronizarse
+            con el iPhone asociado mediante los mecanismos seguros de Apple.
         </p>
 
         <p>
-            Las funciones relacionadas con Apple Health y GPS solo se utilizan
-            cuando el usuario las activa.
+            • No se transmiten datos a servidores externos.
         </p>
 
+        <h2>4. Compartición de datos</h2>
+
         <p>
-            Para cualquier consulta:
+            • Whistle Pro no comparte datos con terceros.
+        </p>
+
+        <h2>5. Seguridad</h2>
+
+        <p>
+            • Los datos permanecen almacenados localmente
+            en los dispositivos Apple del usuario.
+        </p>
+
+        <h2>6. Contacto</h2>
+
+        <p>
+            Para cualquier pregunta:
             <a href="mailto:contact@whistlepro.com">
                 contact@whistlepro.com
             </a>
@@ -722,13 +761,13 @@ const privacyPolicy = {
 
 
 /* =========================================================
-   LEGAL NOTICE / EUROPE
+   EUROPEAN PRIVACY POLICY
 ========================================================= */
 
 const legalNotice = {
 
     en: `
-        <h1>Legal Notice and Privacy Policy</h1>
+        <h1>European Privacy Policy</h1>
 
         <h2>1. Developer Identity</h2>
 
@@ -765,10 +804,12 @@ const legalNotice = {
 
         <ul>
             <li>Local match and configuration data;</li>
+
             <li>
                 Activity data (distance, heart rate, calories, etc.)
                 only if the user enables HealthKit;
             </li>
+
             <li>
                 GPS location only if the user enables it to calculate
                 distance between home and fields.
@@ -816,7 +857,7 @@ const legalNotice = {
 
 
     fr: `
-        <h1>Mentions légales et politique de confidentialité</h1>
+        <h1>Politique de confidentialité Européenne</h1>
 
         <h2>1. Identité du développeur</h2>
 
@@ -856,11 +897,13 @@ const legalNotice = {
 
         <ul>
             <li>Données locales de match, chronomètres et configurations ;</li>
+
             <li>
                 Données d’activité physique
                 (distance, rythme cardiaque, calories, etc.)
                 uniquement si l’utilisateur active HealthKit ;
             </li>
+
             <li>
                 Localisation GPS, uniquement si l’utilisateur active
                 le GPS pour calculer la distance entre les terrains
@@ -911,26 +954,83 @@ const legalNotice = {
 
 
     es: `
-        <h1>Aviso legal</h1>
+        <h1>Política de privacidad europea</h1>
+
+        <h2>1. Identidad del desarrollador</h2>
 
         <p>
-            La versión oficial de este documento está disponible
-            en inglés y francés.
+            WhistlePro es desarrollado y distribuido por:<br>
+            M Lefebvre<br>
+            Desarrollador independiente – Aplicaciones móviles<br>
+            Blainville, Quebec (Canadá)
         </p>
 
         <p>
-            WhistlePro es desarrollado y distribuido por un desarrollador
-            independiente con sede en Blainville, Quebec, Canadá.
+            Todas las compras y suscripciones se gestionan mediante
+            Apple App Store, que actúa como vendedor oficial
+            para los consumidores de la Unión Europea.
+        </p>
+
+        <h2>2. Suscripciones y compras</h2>
+
+        <p>
+            Los precios, renovaciones automáticas y reembolsos
+            son gestionados directamente por Apple.
+        </p>
+
+        <h2>3. Protección de datos y privacidad (RGPD)</h2>
+
+        <p>
+            WhistlePro solo utiliza los datos estrictamente necesarios
+            para el funcionamiento de la aplicación:
+        </p>
+
+        <ul>
+            <li>Datos locales de partidos y configuración;</li>
+
+            <li>
+                Datos de actividad física solamente cuando
+                el usuario activa HealthKit;
+            </li>
+
+            <li>
+                Ubicación GPS solamente cuando el usuario
+                activa esta función.
+            </li>
+        </ul>
+
+        <p>
+            Ningún dato se vende, comparte ni transmite a terceros.
+            Los datos permanecen en los dispositivos del usuario
+            o en iCloud mediante los servicios seguros de Apple.
         </p>
 
         <p>
-            Las compras y suscripciones se gestionan mediante Apple App Store.
+            Los usuarios europeos tienen derecho a acceder,
+            rectificar y eliminar sus datos de acuerdo con
+            el Reglamento (UE) 2016/679.
         </p>
 
         <p>
-            Los usuarios europeos conservan sus derechos en virtud
-            del Reglamento (UE) 2016/679 y de la legislación aplicable
-            de protección al consumidor.
+            Las solicitudes pueden enviarse a
+            <a href="mailto:privacy@whistlepro.app">
+                privacy@whistlepro.app
+            </a>.
+        </p>
+
+        <h2>4. Derechos de los consumidores</h2>
+
+        <p>
+            Las compras, renovaciones y reembolsos son gestionados
+            directamente por Apple App Store Support.
+        </p>
+
+        <h2>5. Legislación aplicable</h2>
+
+        <p>
+            Este servicio se proporciona desde Canadá,
+            sin perjuicio de los derechos obligatorios de protección
+            al consumidor aplicables en la Unión Europea.
         </p>
     `
 };
@@ -941,11 +1041,8 @@ const legalNotice = {
 ========================================================= */
 
 let currentLanguage = detectLanguage();
-
 let currentSlide = 0;
-
 let currentTutorial = 0;
-
 let slideTimer = null;
 
 
@@ -953,113 +1050,63 @@ let slideTimer = null;
    DOM
 ========================================================= */
 
-const heroImage =
-    document.getElementById("heroImage");
+const heroImage = document.getElementById("heroImage");
+const heroKicker = document.getElementById("heroKicker");
+const heroTitle = document.getElementById("heroTitle");
+const heroDescription = document.getElementById("heroDescription");
 
-const heroKicker =
-    document.getElementById("heroKicker");
+const featureButtons = document.querySelectorAll("[data-slide]");
+const indicators = document.querySelectorAll(".indicator");
 
-const heroTitle =
-    document.getElementById("heroTitle");
+const languageSelector = document.getElementById("languageSelector");
 
-const heroDescription =
-    document.getElementById("heroDescription");
+const menuButton = document.getElementById("menuButton");
+const closeMenuButton = document.getElementById("closeMenuButton");
+const mainMenu = document.getElementById("mainMenu");
+const menuOverlay = document.getElementById("menuOverlay");
 
-const featureButtons =
-    document.querySelectorAll("[data-slide]");
+const tutorialSelector = document.getElementById("tutorialSelector");
+const tutorialList = document.getElementById("tutorialList");
+const tutorialTitle = document.getElementById("tutorialTitle");
+const tutorialDescription = document.getElementById("tutorialDescription");
+const tutorialVideoLabel = document.getElementById("tutorialVideoLabel");
 
-const indicators =
-    document.querySelectorAll(".indicator");
-
-const languageSelector =
-    document.getElementById("languageSelector");
-
-const menuButton =
-    document.getElementById("menuButton");
-
-const closeMenuButton =
-    document.getElementById("closeMenuButton");
-
-const mainMenu =
-    document.getElementById("mainMenu");
-
-const menuOverlay =
-    document.getElementById("menuOverlay");
-
-const tutorialSelector =
-    document.getElementById("tutorialSelector");
-
-const tutorialList =
-    document.getElementById("tutorialList");
-
-const tutorialTitle =
-    document.getElementById("tutorialTitle");
-
-const tutorialDescription =
-    document.getElementById("tutorialDescription");
-
-const tutorialVideoLabel =
-    document.getElementById("tutorialVideoLabel");
-
-const privacyContentContainer =
-    document.getElementById("privacyContent");
-
-const legalContentContainer =
-    document.getElementById("legalContent");
+const privacyContentContainer = document.getElementById("privacyContent");
+const legalContentContainer = document.getElementById("legalContent");
 
 
 /* =========================================================
    INIT
 ========================================================= */
 
-document.addEventListener(
-    "DOMContentLoaded",
-    () => {
+document.addEventListener("DOMContentLoaded", () => {
 
-        languageSelector.value =
-            currentLanguage;
+    languageSelector.value = currentLanguage;
 
-        document.documentElement.lang =
-            currentLanguage;
+    document.documentElement.lang = currentLanguage;
 
-        document.getElementById(
-            "currentYear"
-        ).textContent =
-            new Date().getFullYear();
+    document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
 
+    document.getElementById("appStoreButton").href =
+        APP_STORE_URL;
 
-        document.getElementById(
-            "appStoreButton"
-        ).href =
-            APP_STORE_URL;
+    document.getElementById("menuAppStoreButton").href =
+        APP_STORE_URL;
 
+    updateTranslations();
 
-        document.getElementById(
-            "menuAppStoreButton"
-        ).href =
-            APP_STORE_URL;
+    renderFeatures();
+    renderTutorialNavigation();
+    renderTutorial();
+    renderPrivacy();
+    renderLegal();
 
+    showSlide(0);
+    startSlideshow();
 
-        updateTranslations();
-
-        renderFeatures();
-
-        renderTutorialNavigation();
-
-        renderTutorial();
-
-        renderPrivacy();
-
-        renderLegal();
-
-        showSlide(0);
-
-        startSlideshow();
-
-        handleURL();
-
-    }
-);
+    handleURL();
+});
 
 
 /* =========================================================
@@ -1069,10 +1116,7 @@ document.addEventListener(
 function detectLanguage() {
 
     const saved =
-        localStorage.getItem(
-            "whistleProLanguage"
-        );
-
+        localStorage.getItem("whistleProLanguage");
 
     if (
         saved === "en" ||
@@ -1082,70 +1126,50 @@ function detectLanguage() {
         return saved;
     }
 
-
     const browser =
         navigator.language.toLowerCase();
 
-
-    if (
-        browser.startsWith("fr")
-    ) {
+    if (browser.startsWith("fr")) {
         return "fr";
     }
 
-
-    if (
-        browser.startsWith("es")
-    ) {
+    if (browser.startsWith("es")) {
         return "es";
     }
-
 
     return "en";
 }
 
 
-languageSelector.addEventListener(
-    "change",
-    event => {
+languageSelector.addEventListener("change", event => {
 
-        currentLanguage =
-            event.target.value;
+    currentLanguage =
+        event.target.value;
 
+    localStorage.setItem(
+        "whistleProLanguage",
+        currentLanguage
+    );
 
-        localStorage.setItem(
-            "whistleProLanguage",
-            currentLanguage
-        );
+    document.documentElement.lang =
+        currentLanguage;
 
+    updateTranslations();
 
-        document.documentElement.lang =
-            currentLanguage;
+    renderFeatures();
+    renderTutorialNavigation();
+    renderTutorial();
+    renderPrivacy();
+    renderLegal();
 
-
-        updateTranslations();
-
-        renderFeatures();
-
-        renderTutorialNavigation();
-
-        renderTutorial();
-
-        renderPrivacy();
-
-        renderLegal();
-
-        showSlide(currentSlide);
-
-    }
-);
+    showSlide(currentSlide);
+});
 
 
 function updateTranslations() {
 
     const dictionary =
         translations[currentLanguage];
-
 
     document
         .querySelectorAll("[data-i18n]")
@@ -1154,14 +1178,10 @@ function updateTranslations() {
             const key =
                 element.dataset.i18n;
 
-
-            if (
-                dictionary[key]
-            ) {
+            if (dictionary[key]) {
                 element.textContent =
                     dictionary[key];
             }
-
         });
 }
 
@@ -1175,43 +1195,31 @@ function showSlide(index) {
     const languageSlides =
         slides[currentLanguage];
 
-
     currentSlide =
         index % languageSlides.length;
-
 
     const slide =
         languageSlides[currentSlide];
 
+    heroImage.style.opacity = "0";
 
-    heroImage.style.opacity =
-        "0";
+    setTimeout(() => {
 
+        heroImage.src = slide.image;
+        heroImage.alt = slide.alt;
 
-    setTimeout(
-        () => {
+        heroKicker.textContent =
+            slide.kicker;
 
-            heroImage.src =
-                slide.image;
+        heroTitle.textContent =
+            slide.title;
 
-            heroImage.alt =
-                slide.alt;
+        heroDescription.textContent =
+            slide.description;
 
-            heroKicker.textContent =
-                slide.kicker;
+        heroImage.style.opacity = "1";
 
-            heroTitle.textContent =
-                slide.title;
-
-            heroDescription.textContent =
-                slide.description;
-
-            heroImage.style.opacity =
-                "1";
-
-        },
-        160
-    );
+    }, 160);
 
 
     featureButtons.forEach(
@@ -1221,7 +1229,6 @@ function showSlide(index) {
                 "active",
                 buttonIndex === currentSlide
             );
-
         }
     );
 
@@ -1233,7 +1240,6 @@ function showSlide(index) {
                 "active",
                 indicatorIndex === currentSlide
             );
-
         }
     );
 }
@@ -1252,7 +1258,6 @@ function startSlideshow() {
 
     stopSlideshow();
 
-
     slideTimer =
         setInterval(
             nextSlide,
@@ -1263,49 +1268,32 @@ function startSlideshow() {
 
 function stopSlideshow() {
 
-    if (
-        slideTimer
-    ) {
+    if (slideTimer) {
 
-        clearInterval(
-            slideTimer
-        );
+        clearInterval(slideTimer);
 
-        slideTimer =
-            null;
-
+        slideTimer = null;
     }
 }
 
 
-featureButtons.forEach(
-    button => {
+featureButtons.forEach(button => {
 
-        button.addEventListener(
-            "click",
-            () => {
+    button.addEventListener("click", () => {
 
-                const index =
-                    Number(
-                        button.dataset.slide
-                    );
+        const index =
+            Number(button.dataset.slide);
 
+        showSlide(index);
 
-                showSlide(index);
+        stopSlideshow();
 
-                stopSlideshow();
-
-
-                setTimeout(
-                    startSlideshow,
-                    15000
-                );
-
-            }
+        setTimeout(
+            startSlideshow,
+            15000
         );
-
-    }
-);
+    });
+});
 
 
 /* =========================================================
@@ -1314,41 +1302,33 @@ featureButtons.forEach(
 
 document
     .querySelectorAll("[data-view]")
-    .forEach(
-        element => {
+    .forEach(element => {
 
-            element.addEventListener(
-                "click",
-                () => {
+        element.addEventListener(
+            "click",
+            () => {
 
-                    const view =
-                        element.dataset.view;
+                const view =
+                    element.dataset.view;
 
+                showView(view);
 
-                    showView(view);
-
-                    closeMenu();
-
-                }
-            );
-
-        }
-    );
+                closeMenu();
+            }
+        );
+    });
 
 
 function showView(viewName) {
 
     document
         .querySelectorAll(".view")
-        .forEach(
-            view => {
+        .forEach(view => {
 
-                view.classList.remove(
-                    "active-view"
-                );
-
-            }
-        );
+            view.classList.remove(
+                "active-view"
+            );
+        });
 
 
     const target =
@@ -1357,34 +1337,27 @@ function showView(viewName) {
         );
 
 
-    if (
-        target
-    ) {
+    if (target) {
 
         target.classList.add(
             "active-view"
         );
-
 
         window.history.replaceState(
             null,
             "",
             `#${viewName}`
         );
-
     }
 
 
-    if (
-        viewName === "home"
-    ) {
+    if (viewName === "home") {
 
         startSlideshow();
 
     } else {
 
         stopSlideshow();
-
     }
 }
 
@@ -1398,12 +1371,10 @@ menuButton.addEventListener(
     openMenu
 );
 
-
 closeMenuButton.addEventListener(
     "click",
     closeMenu
 );
-
 
 menuOverlay.addEventListener(
     "click",
@@ -1413,13 +1384,8 @@ menuOverlay.addEventListener(
 
 function openMenu() {
 
-    mainMenu.classList.add(
-        "open"
-    );
-
-    menuOverlay.classList.add(
-        "open"
-    );
+    mainMenu.classList.add("open");
+    menuOverlay.classList.add("open");
 
     mainMenu.setAttribute(
         "aria-hidden",
@@ -1430,13 +1396,8 @@ function openMenu() {
 
 function closeMenu() {
 
-    mainMenu.classList.remove(
-        "open"
-    );
-
-    menuOverlay.classList.remove(
-        "open"
-    );
+    mainMenu.classList.remove("open");
+    menuOverlay.classList.remove("open");
 
     mainMenu.setAttribute(
         "aria-hidden",
@@ -1454,24 +1415,20 @@ function renderFeatures() {
     const features =
         featureLists[currentLanguage];
 
-
     renderList(
         "watchFeatures",
         features.watch
     );
-
 
     renderList(
         "phoneFeatures",
         features.phone
     );
 
-
     renderList(
         "dataFeatures",
         features.data
     );
-
 
     renderList(
         "expenseFeatures",
@@ -1490,30 +1447,17 @@ function renderList(
             elementId
         );
 
+    list.innerHTML = "";
 
-    list.innerHTML =
-        "";
+    items.forEach(item => {
 
+        const li =
+            document.createElement("li");
 
-    items.forEach(
-        item => {
+        li.textContent = item;
 
-            const li =
-                document.createElement(
-                    "li"
-                );
-
-
-            li.textContent =
-                item;
-
-
-            list.appendChild(
-                li
-            );
-
-        }
-    );
+        list.appendChild(li);
+    });
 }
 
 
@@ -1526,38 +1470,25 @@ function renderTutorialNavigation() {
     const languageTutorials =
         tutorials[currentLanguage];
 
-
-    tutorialList.innerHTML =
-        "";
-
-
-    tutorialSelector.innerHTML =
-        "";
+    tutorialList.innerHTML = "";
+    tutorialSelector.innerHTML = "";
 
 
     languageTutorials.forEach(
         (tutorial, index) => {
 
-
             const button =
-                document.createElement(
-                    "button"
-                );
+                document.createElement("button");
 
-
-            button.type =
-                "button";
-
+            button.type = "button";
 
             button.textContent =
                 tutorial.title;
-
 
             button.classList.toggle(
                 "active",
                 index === currentTutorial
             );
-
 
             button.addEventListener(
                 "click",
@@ -1566,16 +1497,11 @@ function renderTutorialNavigation() {
                     currentTutorial =
                         index;
 
-
                     renderTutorialNavigation();
-
                     renderTutorial();
-
                     updateTutorialURL();
-
                 }
             );
-
 
             tutorialList.appendChild(
                 button
@@ -1583,26 +1509,18 @@ function renderTutorialNavigation() {
 
 
             const option =
-                document.createElement(
-                    "option"
-                );
+                document.createElement("option");
 
-
-            option.value =
-                index;
-
+            option.value = index;
 
             option.textContent =
                 tutorial.title;
 
-
             tutorialSelector.appendChild(
                 option
             );
-
         }
     );
-
 
     tutorialSelector.value =
         currentTutorial;
@@ -1618,13 +1536,9 @@ tutorialSelector.addEventListener(
                 event.target.value
             );
 
-
         renderTutorialNavigation();
-
         renderTutorial();
-
         updateTutorialURL();
-
     }
 );
 
@@ -1635,14 +1549,11 @@ function renderTutorial() {
         tutorials[currentLanguage]
         [currentTutorial];
 
-
     tutorialTitle.textContent =
         tutorial.title;
 
-
     tutorialDescription.textContent =
         tutorial.description;
-
 
     tutorialVideoLabel.textContent =
         tutorial.title;
@@ -1654,7 +1565,6 @@ function updateTutorialURL() {
     const tutorial =
         tutorials[currentLanguage]
         [currentTutorial];
-
 
     window.history.replaceState(
         null,
@@ -1676,7 +1586,7 @@ function renderPrivacy() {
 
 
 /* =========================================================
-   LEGAL
+   EUROPEAN PRIVACY
 ========================================================= */
 
 function renderLegal() {
@@ -1699,16 +1609,11 @@ function handleURL() {
         );
 
 
-    if (
-        !hash
-    ) {
+    if (!hash) {
 
-        showView(
-            "home"
-        );
+        showView("home");
 
         return;
-
     }
 
 
@@ -1721,7 +1626,6 @@ function handleURL() {
         const tutorialId =
             hash.split("/")[1];
 
-
         const index =
             tutorials[currentLanguage]
             .findIndex(
@@ -1730,29 +1634,18 @@ function handleURL() {
                     tutorialId
             );
 
-
-        if (
-            index >= 0
-        ) {
+        if (index >= 0) {
 
             currentTutorial =
                 index;
 
-
             renderTutorialNavigation();
-
             renderTutorial();
-
         }
 
-
-        showView(
-            "tutorials"
-        );
-
+        showView("tutorials");
 
         return;
-
     }
 
 
@@ -1767,21 +1660,14 @@ function handleURL() {
 
 
     if (
-        validViews.includes(
-            hash
-        )
+        validViews.includes(hash)
     ) {
 
-        showView(
-            hash
-        );
+        showView(hash);
 
     } else {
 
-        showView(
-            "home"
-        );
-
+        showView("home");
     }
 }
 
@@ -1800,13 +1686,9 @@ document.addEventListener(
     "keydown",
     event => {
 
-        if (
-            event.key === "Escape"
-        ) {
+        if (event.key === "Escape") {
 
             closeMenu();
-
         }
-
     }
 );
