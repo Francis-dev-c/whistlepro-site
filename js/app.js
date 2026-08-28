@@ -7,7 +7,6 @@
    CONFIG
 ========================================================= */
 
-const APP_STORE_URL = "#";
 const SLIDE_DURATION = 6000;
 
 
@@ -23,7 +22,6 @@ const translations = {
         menuHome: "Home",
         menuPresentation: "Presentation",
         menuTutorials: "Tutorials",
-        menuDownload: "Download on the App Store",
 
         menuPrivacy: "Privacy Policy",
         menuLegal: "European Privacy Policy",
@@ -63,7 +61,6 @@ const translations = {
         menuHome: "Accueil",
         menuPresentation: "Présentation",
         menuTutorials: "Tutoriels",
-        menuDownload: "Télécharger sur l’App Store",
 
         menuPrivacy: "Politique de confidentialité",
         menuLegal: "Politique de confidentialité Européenne",
@@ -103,7 +100,6 @@ const translations = {
         menuHome: "Inicio",
         menuPresentation: "Presentación",
         menuTutorials: "Tutoriales",
-        menuDownload: "Descargar en App Store",
 
         menuPrivacy: "Política de privacidad",
         menuLegal: "Política de privacidad europea",
@@ -381,42 +377,50 @@ const tutorials = {
         {
             id: "match-setup",
             title: "Match setup",
-            description: "Prepare a match before heading onto the field."
+            description:
+                "Prepare a match before heading onto the field."
         },
         {
             id: "import",
             title: "Import matches",
-            description: "Import scheduled matches from supported platforms."
+            description:
+                "Import scheduled matches from supported platforms."
         },
         {
             id: "roster",
             title: "Roster management",
-            description: "Review and manage players and team staff."
+            description:
+                "Review and manage players and team staff."
         },
         {
             id: "start-match",
             title: "Start a match",
-            description: "Start the match and select the team taking kickoff."
+            description:
+                "Start the match and select the team taking kickoff."
         },
         {
             id: "goals-cards",
             title: "Goals and cards",
-            description: "Record goals, cards and player numbers quickly."
+            description:
+                "Record goals, cards and player numbers quickly."
         },
         {
             id: "match-end",
             title: "End a match",
-            description: "Finish periods, overtime and the complete match."
+            description:
+                "Finish periods, overtime and the complete match."
         },
         {
             id: "export",
             title: "Export data",
-            description: "Export reports and match data in PDF, CSV or Excel."
+            description:
+                "Export reports and match data in PDF, CSV or Excel."
         },
         {
             id: "expenses",
             title: "Expenses",
-            description: "Track referee expenses and mileage."
+            description:
+                "Track referee expenses and mileage."
         }
     ],
 
@@ -425,42 +429,50 @@ const tutorials = {
         {
             id: "match-setup",
             title: "Préparer un match",
-            description: "Préparez votre match avant d’arriver sur le terrain."
+            description:
+                "Préparez votre match avant d’arriver sur le terrain."
         },
         {
             id: "import",
             title: "Importer les matchs",
-            description: "Importez les matchs depuis les plateformes compatibles."
+            description:
+                "Importez les matchs depuis les plateformes compatibles."
         },
         {
             id: "roster",
             title: "Gestion des compositions",
-            description: "Consultez et gérez les joueurs et membres du personnel."
+            description:
+                "Consultez et gérez les joueurs et membres du personnel."
         },
         {
             id: "start-match",
             title: "Démarrer un match",
-            description: "Démarrez le match et sélectionnez l’équipe qui engage."
+            description:
+                "Démarrez le match et sélectionnez l’équipe qui engage."
         },
         {
             id: "goals-cards",
             title: "Buts et cartons",
-            description: "Inscrivez rapidement les buts, cartons et numéros de joueurs."
+            description:
+                "Inscrivez rapidement les buts, cartons et numéros de joueurs."
         },
         {
             id: "match-end",
             title: "Terminer le match",
-            description: "Gérez la fin des périodes, prolongations et du match."
+            description:
+                "Gérez la fin des périodes, prolongations et du match."
         },
         {
             id: "export",
             title: "Exporter les données",
-            description: "Exportez vos rapports et données en PDF, CSV ou Excel."
+            description:
+                "Exportez vos rapports et données en PDF, CSV ou Excel."
         },
         {
             id: "expenses",
             title: "Dépenses",
-            description: "Suivez vos dépenses d’arbitrage et votre kilométrage."
+            description:
+                "Suivez vos dépenses d’arbitrage et votre kilométrage."
         }
     ],
 
@@ -469,42 +481,50 @@ const tutorials = {
         {
             id: "match-setup",
             title: "Preparar un partido",
-            description: "Prepara el partido antes de llegar al campo."
+            description:
+                "Prepara el partido antes de llegar al campo."
         },
         {
             id: "import",
             title: "Importar partidos",
-            description: "Importa partidos desde plataformas compatibles."
+            description:
+                "Importa partidos desde plataformas compatibles."
         },
         {
             id: "roster",
             title: "Gestión de plantillas",
-            description: "Consulta y gestiona jugadores y personal técnico."
+            description:
+                "Consulta y gestiona jugadores y personal técnico."
         },
         {
             id: "start-match",
             title: "Iniciar un partido",
-            description: "Inicia el partido y selecciona el equipo que realiza el saque inicial."
+            description:
+                "Inicia el partido y selecciona el equipo que realiza el saque inicial."
         },
         {
             id: "goals-cards",
             title: "Goles y tarjetas",
-            description: "Registra goles, tarjetas y números de jugador."
+            description:
+                "Registra goles, tarjetas y números de jugador."
         },
         {
             id: "match-end",
             title: "Finalizar el partido",
-            description: "Gestiona el final de periodos, prórrogas y partido."
+            description:
+                "Gestiona el final de periodos, prórrogas y partido."
         },
         {
             id: "export",
             title: "Exportar datos",
-            description: "Exporta informes y datos en PDF, CSV o Excel."
+            description:
+                "Exporta informes y datos en PDF, CSV o Excel."
         },
         {
             id: "expenses",
             title: "Gastos",
-            description: "Controla gastos y kilometraje."
+            description:
+                "Controla gastos y kilometraje."
         }
     ]
 };
@@ -1050,29 +1070,59 @@ let slideTimer = null;
    DOM
 ========================================================= */
 
-const heroImage = document.getElementById("heroImage");
-const heroKicker = document.getElementById("heroKicker");
-const heroTitle = document.getElementById("heroTitle");
-const heroDescription = document.getElementById("heroDescription");
+const heroImage =
+    document.getElementById("heroImage");
 
-const featureButtons = document.querySelectorAll("[data-slide]");
-const indicators = document.querySelectorAll(".indicator");
+const heroKicker =
+    document.getElementById("heroKicker");
 
-const languageSelector = document.getElementById("languageSelector");
+const heroTitle =
+    document.getElementById("heroTitle");
 
-const menuButton = document.getElementById("menuButton");
-const closeMenuButton = document.getElementById("closeMenuButton");
-const mainMenu = document.getElementById("mainMenu");
-const menuOverlay = document.getElementById("menuOverlay");
+const heroDescription =
+    document.getElementById("heroDescription");
 
-const tutorialSelector = document.getElementById("tutorialSelector");
-const tutorialList = document.getElementById("tutorialList");
-const tutorialTitle = document.getElementById("tutorialTitle");
-const tutorialDescription = document.getElementById("tutorialDescription");
-const tutorialVideoLabel = document.getElementById("tutorialVideoLabel");
+const featureButtons =
+    document.querySelectorAll("[data-slide]");
 
-const privacyContentContainer = document.getElementById("privacyContent");
-const legalContentContainer = document.getElementById("legalContent");
+const indicators =
+    document.querySelectorAll(".indicator");
+
+const languageSelector =
+    document.getElementById("languageSelector");
+
+const menuButton =
+    document.getElementById("menuButton");
+
+const closeMenuButton =
+    document.getElementById("closeMenuButton");
+
+const mainMenu =
+    document.getElementById("mainMenu");
+
+const menuOverlay =
+    document.getElementById("menuOverlay");
+
+const tutorialSelector =
+    document.getElementById("tutorialSelector");
+
+const tutorialList =
+    document.getElementById("tutorialList");
+
+const tutorialTitle =
+    document.getElementById("tutorialTitle");
+
+const tutorialDescription =
+    document.getElementById("tutorialDescription");
+
+const tutorialVideoLabel =
+    document.getElementById("tutorialVideoLabel");
+
+const privacyContentContainer =
+    document.getElementById("privacyContent");
+
+const legalContentContainer =
+    document.getElementById("legalContent");
 
 
 /* =========================================================
@@ -1081,18 +1131,24 @@ const legalContentContainer = document.getElementById("legalContent");
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    languageSelector.value = currentLanguage;
+    if (languageSelector) {
+        languageSelector.value =
+            currentLanguage;
+    }
 
-    document.documentElement.lang = currentLanguage;
+    document.documentElement.lang =
+        currentLanguage;
 
-    document.getElementById("currentYear").textContent =
-        new Date().getFullYear();
 
-    document.getElementById("appStoreButton").href =
-        APP_STORE_URL;
+    const currentYear =
+        document.getElementById("currentYear");
 
-    document.getElementById("menuAppStoreButton").href =
-        APP_STORE_URL;
+    if (currentYear) {
+
+        currentYear.textContent =
+            new Date().getFullYear();
+    }
+
 
     updateTranslations();
 
@@ -1116,60 +1172,78 @@ document.addEventListener("DOMContentLoaded", () => {
 function detectLanguage() {
 
     const saved =
-        localStorage.getItem("whistleProLanguage");
+        localStorage.getItem(
+            "whistleProLanguage"
+        );
+
 
     if (
         saved === "en" ||
         saved === "fr" ||
         saved === "es"
     ) {
+
         return saved;
     }
 
+
     const browser =
         navigator.language.toLowerCase();
+
 
     if (browser.startsWith("fr")) {
         return "fr";
     }
 
+
     if (browser.startsWith("es")) {
         return "es";
     }
+
 
     return "en";
 }
 
 
-languageSelector.addEventListener("change", event => {
+if (languageSelector) {
 
-    currentLanguage =
-        event.target.value;
+    languageSelector.addEventListener(
+        "change",
+        event => {
 
-    localStorage.setItem(
-        "whistleProLanguage",
-        currentLanguage
+            currentLanguage =
+                event.target.value;
+
+
+            localStorage.setItem(
+                "whistleProLanguage",
+                currentLanguage
+            );
+
+
+            document.documentElement.lang =
+                currentLanguage;
+
+
+            updateTranslations();
+
+            renderFeatures();
+            renderTutorialNavigation();
+            renderTutorial();
+            renderPrivacy();
+            renderLegal();
+
+            showSlide(currentSlide);
+        }
     );
-
-    document.documentElement.lang =
-        currentLanguage;
-
-    updateTranslations();
-
-    renderFeatures();
-    renderTutorialNavigation();
-    renderTutorial();
-    renderPrivacy();
-    renderLegal();
-
-    showSlide(currentSlide);
-});
+}
 
 
 function updateTranslations() {
 
     const dictionary =
         translations[currentLanguage];
+
 
     document
         .querySelectorAll("[data-i18n]")
@@ -1178,7 +1252,9 @@ function updateTranslations() {
             const key =
                 element.dataset.i18n;
 
+
             if (dictionary[key]) {
+
                 element.textContent =
                     dictionary[key];
             }
@@ -1195,18 +1271,35 @@ function showSlide(index) {
     const languageSlides =
         slides[currentLanguage];
 
+
     currentSlide =
         index % languageSlides.length;
+
 
     const slide =
         languageSlides[currentSlide];
 
+
+    if (
+        !heroImage ||
+        !heroKicker ||
+        !heroTitle ||
+        !heroDescription
+    ) {
+        return;
+    }
+
+
     heroImage.style.opacity = "0";
+
 
     setTimeout(() => {
 
-        heroImage.src = slide.image;
-        heroImage.alt = slide.alt;
+        heroImage.src =
+            slide.image;
+
+        heroImage.alt =
+            slide.alt;
 
         heroKicker.textContent =
             slide.kicker;
@@ -1217,7 +1310,8 @@ function showSlide(index) {
         heroDescription.textContent =
             slide.description;
 
-        heroImage.style.opacity = "1";
+        heroImage.style.opacity =
+            "1";
 
     }, 160);
 
@@ -1258,6 +1352,7 @@ function startSlideshow() {
 
     stopSlideshow();
 
+
     slideTimer =
         setInterval(
             nextSlide,
@@ -1279,20 +1374,27 @@ function stopSlideshow() {
 
 featureButtons.forEach(button => {
 
-    button.addEventListener("click", () => {
+    button.addEventListener(
+        "click",
+        () => {
 
-        const index =
-            Number(button.dataset.slide);
+            const index =
+                Number(
+                    button.dataset.slide
+                );
 
-        showSlide(index);
 
-        stopSlideshow();
+            showSlide(index);
 
-        setTimeout(
-            startSlideshow,
-            15000
-        );
-    });
+            stopSlideshow();
+
+
+            setTimeout(
+                startSlideshow,
+                15000
+            );
+        }
+    );
 });
 
 
@@ -1310,6 +1412,7 @@ document
 
                 const view =
                     element.dataset.view;
+
 
                 showView(view);
 
@@ -1343,6 +1446,7 @@ function showView(viewName) {
             "active-view"
         );
 
+
         window.history.replaceState(
             null,
             "",
@@ -1366,26 +1470,44 @@ function showView(viewName) {
    MENU
 ========================================================= */
 
-menuButton.addEventListener(
-    "click",
-    openMenu
-);
+if (menuButton) {
 
-closeMenuButton.addEventListener(
-    "click",
-    closeMenu
-);
+    menuButton.addEventListener(
+        "click",
+        openMenu
+    );
+}
 
-menuOverlay.addEventListener(
-    "click",
-    closeMenu
-);
+
+if (closeMenuButton) {
+
+    closeMenuButton.addEventListener(
+        "click",
+        closeMenu
+    );
+}
+
+
+if (menuOverlay) {
+
+    menuOverlay.addEventListener(
+        "click",
+        closeMenu
+    );
+}
 
 
 function openMenu() {
 
+    if (!mainMenu || !menuOverlay) {
+        return;
+    }
+
+
     mainMenu.classList.add("open");
+
     menuOverlay.classList.add("open");
+
 
     mainMenu.setAttribute(
         "aria-hidden",
@@ -1396,8 +1518,15 @@ function openMenu() {
 
 function closeMenu() {
 
+    if (!mainMenu || !menuOverlay) {
+        return;
+    }
+
+
     mainMenu.classList.remove("open");
+
     menuOverlay.classList.remove("open");
+
 
     mainMenu.setAttribute(
         "aria-hidden",
@@ -1415,20 +1544,24 @@ function renderFeatures() {
     const features =
         featureLists[currentLanguage];
 
+
     renderList(
         "watchFeatures",
         features.watch
     );
+
 
     renderList(
         "phoneFeatures",
         features.phone
     );
 
+
     renderList(
         "dataFeatures",
         features.data
     );
+
 
     renderList(
         "expenseFeatures",
@@ -1447,14 +1580,24 @@ function renderList(
             elementId
         );
 
+
+    if (!list) {
+        return;
+    }
+
+
     list.innerHTML = "";
+
 
     items.forEach(item => {
 
         const li =
             document.createElement("li");
 
-        li.textContent = item;
+
+        li.textContent =
+            item;
+
 
         list.appendChild(li);
     });
@@ -1467,28 +1610,47 @@ function renderList(
 
 function renderTutorialNavigation() {
 
+    if (
+        !tutorialList ||
+        !tutorialSelector
+    ) {
+        return;
+    }
+
+
     const languageTutorials =
         tutorials[currentLanguage];
 
-    tutorialList.innerHTML = "";
-    tutorialSelector.innerHTML = "";
+
+    tutorialList.innerHTML =
+        "";
+
+    tutorialSelector.innerHTML =
+        "";
 
 
     languageTutorials.forEach(
         (tutorial, index) => {
 
             const button =
-                document.createElement("button");
+                document.createElement(
+                    "button"
+                );
 
-            button.type = "button";
+
+            button.type =
+                "button";
+
 
             button.textContent =
                 tutorial.title;
+
 
             button.classList.toggle(
                 "active",
                 index === currentTutorial
             );
+
 
             button.addEventListener(
                 "click",
@@ -1497,11 +1659,15 @@ function renderTutorialNavigation() {
                     currentTutorial =
                         index;
 
+
                     renderTutorialNavigation();
+
                     renderTutorial();
+
                     updateTutorialURL();
                 }
             );
+
 
             tutorialList.appendChild(
                 button
@@ -1509,12 +1675,18 @@ function renderTutorialNavigation() {
 
 
             const option =
-                document.createElement("option");
+                document.createElement(
+                    "option"
+                );
 
-            option.value = index;
+
+            option.value =
+                index;
+
 
             option.textContent =
                 tutorial.title;
+
 
             tutorialSelector.appendChild(
                 option
@@ -1522,38 +1694,57 @@ function renderTutorialNavigation() {
         }
     );
 
+
     tutorialSelector.value =
         currentTutorial;
 }
 
 
-tutorialSelector.addEventListener(
-    "change",
-    event => {
+if (tutorialSelector) {
 
-        currentTutorial =
-            Number(
-                event.target.value
-            );
+    tutorialSelector.addEventListener(
+        "change",
+        event => {
 
-        renderTutorialNavigation();
-        renderTutorial();
-        updateTutorialURL();
-    }
-);
+            currentTutorial =
+                Number(
+                    event.target.value
+                );
+
+
+            renderTutorialNavigation();
+
+            renderTutorial();
+
+            updateTutorialURL();
+        }
+    );
+}
 
 
 function renderTutorial() {
+
+    if (
+        !tutorialTitle ||
+        !tutorialDescription ||
+        !tutorialVideoLabel
+    ) {
+        return;
+    }
+
 
     const tutorial =
         tutorials[currentLanguage]
         [currentTutorial];
 
+
     tutorialTitle.textContent =
         tutorial.title;
 
+
     tutorialDescription.textContent =
         tutorial.description;
+
 
     tutorialVideoLabel.textContent =
         tutorial.title;
@@ -1565,6 +1756,7 @@ function updateTutorialURL() {
     const tutorial =
         tutorials[currentLanguage]
         [currentTutorial];
+
 
     window.history.replaceState(
         null,
@@ -1580,6 +1772,11 @@ function updateTutorialURL() {
 
 function renderPrivacy() {
 
+    if (!privacyContentContainer) {
+        return;
+    }
+
+
     privacyContentContainer.innerHTML =
         privacyPolicy[currentLanguage];
 }
@@ -1590,6 +1787,11 @@ function renderPrivacy() {
 ========================================================= */
 
 function renderLegal() {
+
+    if (!legalContentContainer) {
+        return;
+    }
+
 
     legalContentContainer.innerHTML =
         legalNotice[currentLanguage];
@@ -1626,6 +1828,7 @@ function handleURL() {
         const tutorialId =
             hash.split("/")[1];
 
+
         const index =
             tutorials[currentLanguage]
             .findIndex(
@@ -1634,14 +1837,18 @@ function handleURL() {
                     tutorialId
             );
 
+
         if (index >= 0) {
 
             currentTutorial =
                 index;
 
+
             renderTutorialNavigation();
+
             renderTutorial();
         }
+
 
         showView("tutorials");
 
@@ -1686,7 +1893,10 @@ document.addEventListener(
     "keydown",
     event => {
 
-        if (event.key === "Escape") {
+        if (
+            event.key ===
+            "Escape"
+        ) {
 
             closeMenu();
         }
