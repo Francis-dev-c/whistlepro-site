@@ -1203,17 +1203,13 @@ img {
 
 .feature-navigation {
     margin-top: 7px;
-
     grid-template-columns: repeat(4, 1fr);
-
     gap: 6px;
 }
 
 .feature-button {
     min-height: 48px;
-
     padding: 7px 10px;
-
     font-size: 11px;
 }
 
@@ -1225,33 +1221,17 @@ img {
 }
 
 .site-footer a,
-.site-footer a:visited {
-    color: #777777;
-    text-decoration: none;
-    font: inherit;
-}
-
-.site-footer a:hover {
-    color: #aaaaaa;
-    text-decoration: none;
-}
-
-.site-footer a:active {
-    color: #aaaaaa;
-}
-
-/* Footer - force neutral grey links */
-
-.site-footer,
-.site-footer a,
 .site-footer a:link,
 .site-footer a:visited,
-.site-footer a:hover,
 .site-footer a:active {
     color: #777777 !important;
     text-decoration: none !important;
+    font: inherit;
+    -webkit-text-fill-color: #777777 !important;
 }
 
 .site-footer a:hover {
     color: #aaaaaa !important;
+    text-decoration: none !important;
+    -webkit-text-fill-color: #aaaaaa !important;
 }
