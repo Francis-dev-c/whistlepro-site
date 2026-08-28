@@ -1219,18 +1219,23 @@ img {
 
 .site-footer {
     min-height: 46px;
-
     padding: 8px 0;
-
     font-size: 11px;
+    color: #777777;
 }
 
-.site-footer a {
-    color: inherit;
+.site-footer a,
+.site-footer a:visited {
+    color: #777777;
     text-decoration: none;
     font: inherit;
 }
 
 .site-footer a:hover {
-    color: var(--accent);
+    color: #aaaaaa;
+    text-decoration: none;
+}
+
+.site-footer a:active {
+    color: #aaaaaa;
 }
