@@ -1239,3 +1239,19 @@ img {
 .site-footer a:active {
     color: #aaaaaa;
 }
+
+/* Footer - force neutral grey links */
+
+.site-footer,
+.site-footer a,
+.site-footer a:link,
+.site-footer a:visited,
+.site-footer a:hover,
+.site-footer a:active {
+    color: #777777 !important;
+    text-decoration: none !important;
+}
+
+.site-footer a:hover {
+    color: #aaaaaa !important;
+}
